@@ -10,9 +10,6 @@ body {
     text-align: center; 
     padding: 50px;
 }
-
-/* 1. เพิ่ม position: relative; เพื่อบอกให้กล่องสีขาวเป็น "กรอบหลัก" */
-/* 2. เพิ่ม padding-bottom: 70px; เพื่อเว้นพื้นที่ด้านล่าง ไม่ให้ข้อความไปทับกับปุ่ม */
 .card {
     background: white; 
     border-radius: 10px;
@@ -20,48 +17,17 @@ body {
     max-width: 500px; 
     margin: 0 auto; 
     padding: 30px;
-    padding-bottom: 70px; 
-    position: relative; 
 }
-
 h1 { color: #2c3e50; }
 p { font-size: 18px; line-height: 1.6; }
-
-/* เปลี่ยนจาก fixed เป็น absolute และตั้งค่าให้อยู่มุมขวาล่าง (bottom และ right) */
-.box {
-    width: 140px;
-    padding: 8px 12px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 14px;
-    color: #777;
-
-    position: absolute;
-    bottom: 20px;   /* ระยะห่างจากขอบล่างของกล่องขาว */
-    right: 20px;    /* ระยะห่างจากขอบขวาของกล่องขาว */
-    transition: 0.2s;
-}
-
-.box:hover {
-    background-color: #e0e0e0;
-    color: #333;
-}
 </style>
 </head>
 <body>
-
 <div class="card">
     <h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน</h1>
     <p>สวัสดีค่ะ! ดิฉันชื่อ <strong>ชนภัทร ศิวิไล (Chanapat Siwilai)</strong></p>
     <p>ขณะนี้กำลังศึกษา/สนใจด้าน gifted/Medical & Pharmaceutical</p>
     <p>นี่คือเว็บไซต์แรกของดิฉันที่โฮสต์บน GitHub Pages!</p>
-
-    <div class="box" onclick="window.open('page2.html', '_blank')">
-        คลิกเพื่อเปิดหน้าใหม่
-    </div>
 </div>
 <a href="portfolio.html">ดูแฟ้มสะสมผลงาน</a>
 </body>
