@@ -1,95 +1,187 @@
 <!DOCTYPE html>
-
 <html lang="th">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <meta charset="UTF-8">
+    <title>แฟ้มสะสมงานของฉัน</title>
 
- <meta viewport="width=device-width, initial-scale=1.0">
+    <!-- ฟอนต์ Kanit -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
- <title>แฟ้มสะสมงานของฉัน </title>
+    <style>
 
- <style>
+        body {
+            font-family: "Kanit", sans-serif;
+            background: linear-gradient(135deg, #ffd6e7, #d9f3ff, #fff3b0);
+            text-align: center;
+            padding: 30px;
+            margin: 0;
+            color: #5c4b51;
+        }
 
-body { font-family: sans-serif; background-color: #f4f7f6; text-align: center; 
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-padding: 30px; }
+        h1 {
+            color: #e85d8f;
+            font-size: 36px;
+        }
 
-.container { max-width: 800px; margin: 0 auto; }
+        .description {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
 
-.project-card { background: white; padding: 20px; margin: 20px 0; border-radius: 
+        /* รูปภาพวงกลม */
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 8px 20px rgba(214, 100, 150, 0.3);
+            margin: 15px auto 30px;
+            display: block;
+        }
 
-8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
+        /* กล่องที่กดได้ */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
 
-.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
+        .project-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            margin: 18px 0;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+            text-align: left;
+            transition: 0.3s;
+            border: 3px solid white;
+        }
 
-20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        /* เมื่อเอาเมาส์ไปวาง */
+        .project-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(214, 100, 150, 0.25);
+            background: #fff7fb;
+        }
 
- </style>
+        .project-card h3 {
+            color: #d94f82;
+            font-size: 22px;
+            margin: 0 0 5px;
+        }
 
+        .project-card p {
+            margin: 0;
+            color: #6d5962;
+            font-size: 16px;
+        }
+
+        /* ปุ่มกลับหน้าแรก */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
 </head>
 
 <body>
 
- <div class="container">
+<div class="container">
 
- <h1> แฟ้มสะสมงาน (Portfolio)</h1>
+    <h1>🌸 แฟ้มสะสมงาน (Portfolio) 🌸</h1>
 
- <p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจ</p>
+    <p class="description">
+        นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจ
+    </p>
 
- <img src="IMG_20250831_160950.jpg"
-      alt="Portfolio"
-      style="width:100%; max-width:600px; border-radius:10px; margin:20px 0;">
+    <!-- รูปภาพ -->
+    <img src="IMG_20250831_160950.jpg"
+         alt="รูปภาพ Portfolio"
+         class="profile-image">
 
-<!-- กล่องผลงานชิ้นที่ 1 -->
 
-<a href="intro.html" class="card-link">
-  
-  <div class="project-card">
+    <!-- กล่องที่ 1 -->
+    <a href="intro.html" class="card-link">
+        <div class="project-card">
+            <h3>📖 1. คำนำ</h3>
+            <p>แนะนำและกล่าวถึงความตั้งใจในการจัดทำแฟ้มสะสมงาน</p>
+        </div>
+    </a>
 
- <h3>1. คำนำ </h3>
 
- <p>รายละเอียดชิ้นงาน</p>
+    <!-- กล่องที่ 2 -->
+    <a href="profile.html" class="card-link">
+        <div class="project-card">
+            <h3>👤 2. ประวัติส่วนตัว</h3>
+            <p>ข้อมูลและรายละเอียดเกี่ยวกับตัวฉัน</p>
+        </div>
+    </a>
 
- </div>
 
- </a>
+    <!-- กล่องที่ 3 -->
+    <a href="education.html" class="card-link">
+        <div class="project-card">
+            <h3>🎓 3. ประวัติการศึกษา</h3>
+            <p>ประวัติการศึกษา โรงเรียน และระดับชั้นที่ศึกษา</p>
+        </div>
+    </a>
 
-<!-- กล่องผลงานชิ้นที่ 2 -->
 
-  <a href="activity.html" class="card.link">
+    <!-- กล่องที่ 4 -->
+    <a href="interest.html" class="card-link">
+        <div class="project-card">
+            <h3>🔬 4. ความสนใจในการศึกษาต่อ</h3>
+            <p>สาขาวิชาและแนวทางการศึกษาต่อที่สนใจ</p>
+        </div>
+    </a>
 
- <div class="project-card">
 
- <h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ </h3>
+    <!-- กล่องที่ 5 -->
+    <a href="activity.html" class="card-link">
+        <div class="project-card">
+            <h3>🏆 5. กิจกรรมที่เข้าร่วม</h3>
+            <p>กิจกรรม การแข่งขัน และประสบการณ์ต่าง ๆ</p>
+        </div>
+    </a>
 
- <p>รายละเอียดชิ้นงาน : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
 
- </div>
+    <!-- กล่องที่ 6 -->
+    <a href="talent.html" class="card-link">
+        <div class="project-card">
+            <h3>⭐ 6. ความสามารถพิเศษ</h3>
+            <p>ความสามารถและทักษะที่มีความถนัด</p>
+        </div>
+    </a>
 
-  </a>
- 
-<!-- กล่องผลงานชิ้นที่ 3 -->
 
-  <a href="profile.html" class="card.link"> 
-  
- <div class="project-card"> 
+    <!-- ปุ่มกลับหน้าแรก -->
+    <a href="index.html" class="btn">
+        🏠 กลับหน้าแรก
+    </a>
 
- <h3>3. ประวัติส่วนตัว </h3> 
-
- <p>รายละเอียดชิ้นงาน</p>
-  
- </div>
-
-  </a>
-
-<!-- ปุ่มกดกลับหน้าแรก -->
-
- <a href="index.html" class="btn"> กลับหน้าแรก</a>
-
- </div>
+</div>
 
 </body>
-
 </html>
