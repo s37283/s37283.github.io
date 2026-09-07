@@ -5,19 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ประวัติส่วนตัว | Portfolio</title>
+    <title>ประวัติส่วนตัว | ชนภัทร ศิวิไล</title>
 
     <!-- ฟอนต์ Kanit -->
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             margin: 0;
             padding: 40px 20px;
             font-family: "Kanit", sans-serif;
-            background: linear-gradient(135deg, #ffd6e7, #d9f3ff, #fff3b0);
             color: #5c4b51;
+
+            background: linear-gradient(
+                135deg,
+                #ffd6e7,
+                #d9f3ff,
+                #fff3b0
+            );
+
+            min-height: 100vh;
         }
 
         .container {
@@ -25,40 +41,65 @@
             margin: auto;
         }
 
+        /* กล่องหลัก */
         .card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.96);
             padding: 40px;
             border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(214, 100, 150, 0.2);
+
+            border: 4px solid #ffffff;
+
+            box-shadow:
+                0 15px 35px rgba(214, 100, 150, 0.25);
         }
 
+        /* หัวข้อ */
         h1 {
             text-align: center;
             color: #e85d8f;
-            font-size: 36px;
-            margin-bottom: 30px;
+            font-size: 38px;
+            margin: 0 0 30px;
         }
 
-        /* รูปโปรไฟล์ */
+        /* รูปภาพกรอบสี่เหลี่ยม */
         .profile-image {
             display: block;
-            width: 200px;
-            height: 200px;
+
+            width: 300px;
+            height: 380px;
+
             object-fit: cover;
-            border-radius: 50%;
+
+            border-radius: 15px;
             border: 6px solid #ffffff;
-            box-shadow: 0 8px 20px rgba(214, 100, 150, 0.3);
-            margin: 0 auto 30px;
+
+            margin: 0 auto 35px;
+
+            box-shadow:
+                0 10px 25px rgba(214, 100, 150, 0.3);
         }
 
         /* กล่องข้อมูล */
         .info-box {
             background: #fff7fb;
-            border-radius: 18px;
-            padding: 20px 25px;
-            margin: 15px 0;
+
+            padding: 16px 20px;
+            margin: 14px 0;
+
+            border-radius: 15px;
+
             border-left: 6px solid #ff7eb3;
+
             font-size: 18px;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.05);
+
+            transition: 0.3s;
+        }
+
+        .info-box:hover {
+            transform: translateX(5px);
         }
 
         .label {
@@ -68,34 +109,83 @@
 
         /* งานอดิเรก */
         .hobby-box {
-            background: #f7fbff;
-            border-radius: 18px;
+            background: #f3faff;
+
             padding: 20px 25px;
-            margin-top: 15px;
+            margin-top: 20px;
+
+            border-radius: 15px;
+
+            border-left: 6px solid #7dbfff;
+
             font-size: 18px;
             line-height: 2;
-            border-left: 6px solid #8ac6ff;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.05);
         }
 
+        /* ปุ่มกลับ */
         .btn {
             display: block;
             width: fit-content;
-            margin: 30px auto 0;
-            padding: 12px 25px;
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+
+            margin: 35px auto 0;
+            padding: 12px 28px;
+
+            background: linear-gradient(
+                135deg,
+                #ff7eb3,
+                #ff758c
+            );
+
             color: white;
             text-decoration: none;
+
             border-radius: 30px;
+
             font-size: 18px;
+            font-weight: 500;
+
             transition: 0.3s;
         }
 
         .btn:hover {
             transform: scale(1.05);
+
+            box-shadow:
+                0 8px 18px rgba(255, 117, 140, 0.3);
+        }
+
+        /* ปรับหน้าจอมือถือ */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px 10px;
+            }
+
+            .card {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .profile-image {
+                width: 230px;
+                height: 300px;
+            }
+
+            .info-box,
+            .hobby-box {
+                font-size: 16px;
+            }
         }
 
     </style>
 </head>
+
 
 <body>
 
@@ -103,14 +193,17 @@
 
     <div class="card">
 
+        <!-- หัวข้อ -->
         <h1>👤 ประวัติส่วนตัว</h1>
 
+
         <!-- รูปภาพ -->
-        <!-- IMG_20260907_184850.jpg -->
         <img src="IMG_20260907_184850.jpg"
              alt="รูปประวัติส่วนตัว"
              class="profile-image">
-        
+
+
+        <!-- ข้อมูลส่วนตัว -->
 
         <div class="info-box">
             <span class="label">ชื่อ - นามสกุล :</span>
@@ -147,15 +240,37 @@
             พุทธ
         </div>
 
+
+        <!-- งานอดิเรก -->
+
         <div class="hobby-box">
+
             <span class="label">🎨 งานอดิเรก</span>
+
             <br>
-            📚 อ่านหนังสือ / นิยาย<br>
-            🎧 ฟังเพลง / สารคดี<br>
-            🏛️ ศึกษาเรื่องราวทางประวัติศาสตร์<br>
-            🍳 ทำอาหาร<br>
+
+            📚 อ่านหนังสือ / นิยาย
+
+            <br>
+
+            🎧 ฟังเพลง / สารคดี
+
+            <br>
+
+            🏛️ ศึกษาเรื่องราวทางประวัติศาสตร์
+
+            <br>
+
+            🍳 ทำอาหาร
+
+            <br>
+
             🎨 วาดรูป
+
         </div>
+
+
+        <!-- ปุ่มกลับหน้า Portfolio -->
 
         <a href="portfolio.html" class="btn">
             🌷 กลับหน้า Portfolio
@@ -166,4 +281,7 @@
 </div>
 
 </body>
+
 </html>
+
+ 🌸
