@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 
 <style>
 
@@ -48,16 +48,13 @@ body {
 
 .header h1 {
     margin: 0;
-
     font-size: 42px;
     font-weight: 600;
-
     color: #d63384;
 }
 
 .header p {
     margin-top: 8px;
-
     font-size: 20px;
     color: #777;
 }
@@ -70,7 +67,6 @@ body {
 .content {
     width: 90%;
     max-width: 1000px;
-
     margin: 20px auto 60px;
 }
 
@@ -114,6 +110,7 @@ body {
     color: #d63384;
 
     font-size: 28px;
+
     font-weight: 500;
 }
 
@@ -194,7 +191,6 @@ body {
 /* กล่องรวมมหาวิทยาลัย */
 
 .university-container {
-
     display: grid;
 
     grid-template-columns:
@@ -209,7 +205,6 @@ body {
 ========================= */
 
 .university-card {
-
     background: white;
 
     border-radius: 25px;
@@ -231,7 +226,6 @@ body {
 }
 
 .university-card:hover {
-
     transform: translateY(-7px);
 
     box-shadow:
@@ -243,13 +237,7 @@ body {
    รูปมหาวิทยาลัย
 ========================= */
 
-/*
-   กำหนดกรอบรูปให้เท่ากัน
-   และใช้ contain เพื่อไม่ให้โลโก้ถูกตัด
-*/
-
 .university-card img {
-
     width: 100%;
 
     max-width: 230px;
@@ -269,7 +257,6 @@ body {
 ========================= */
 
 .university-card h3 {
-
     color: #d63384;
 
     font-size: 22px;
@@ -287,7 +274,6 @@ body {
 ========================= */
 
 .university-card p {
-
     color: #555;
 
     font-size: 19px;
@@ -298,41 +284,47 @@ body {
 }
 
 
-/* =========================
-   ปุ่มกลับ
-========================= */
+/* ==================================================
+   ปุ่มกลับหน้า Portfolio
+================================================== */
 
 .back {
-
     text-align: center;
-
-    margin: 40px 0;
+    margin: 50px 0 60px;
 }
 
 .back a {
-
     display: inline-block;
 
-    padding: 12px 30px;
-
-    background: #d63384;
+    background: #ff69a8;
 
     color: white;
 
     text-decoration: none;
 
-    border-radius: 30px;
+    padding: 16px 55px;
 
-    font-size: 18px;
+    border-radius: 50px;
+
+    font-family: "Kanit", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    box-shadow:
+        0 5px 15px rgba(255, 105, 168, 0.25);
 
     transition: 0.3s;
 }
 
 .back a:hover {
+    background: #ff4f98;
 
-    background: #b52a70;
+    transform: translateY(-3px);
 
-    transform: scale(1.05);
+    box-shadow:
+        0 8px 20px rgba(255, 105, 168, 0.35);
 }
 
 
@@ -343,7 +335,6 @@ body {
 @media (max-width: 900px) {
 
     .university-container {
-
         grid-template-columns:
             repeat(2, 1fr);
     }
@@ -357,107 +348,74 @@ body {
 
 @media (max-width: 700px) {
 
-    /* หัวข้อ */
-
     .header {
-
         padding-top: 35px;
     }
 
     .header h1 {
-
         font-size: 31px;
     }
 
     .header p {
-
         font-size: 17px;
     }
 
-
-    /* เนื้อหา */
-
     .content {
-
         width: 94%;
     }
 
-
-    /* การ์ด */
-
     .card {
-
         padding: 25px 22px;
-
         border-left-width: 5px;
     }
 
-
     .card h2 {
-
         font-size: 24px;
     }
 
-
     .card p {
-
         font-size: 17px;
-
         line-height: 1.8;
-
         text-align: left;
     }
 
-
-    /* เป้าหมาย */
-
     .highlight .medical {
-
         font-size: 29px;
     }
 
-
-    /* มหาวิทยาลัย */
-
     .university-container {
-
         grid-template-columns: 1fr;
-
         gap: 20px;
     }
 
-
     .university-title {
-
         font-size: 27px;
-
         line-height: 1.5;
     }
 
-
-    /* รูปบนมือถือ */
-
     .university-card img {
-
         width: 100%;
-
         max-width: 200px;
-
         height: 190px;
-
         object-fit: contain;
     }
 
-
     .university-card h3 {
-
         font-size: 21px;
     }
 
-
     .university-card p {
-
         font-size: 18px;
+    }
+
+    /* ปุ่มมือถือ */
+    .back {
+        margin: 40px 0 50px;
+    }
+
+    .back a {
+        padding: 14px 40px;
+        font-size: 20px;
     }
 
 }
@@ -485,7 +443,6 @@ body {
     </p>
 
 </div>
-
 
 
 <div class="content">
@@ -517,7 +474,6 @@ body {
 </div>
 
 
-
 <!-- ==================================================
      เหตุผลที่สนใจสายการแพทย์
 ================================================== -->
@@ -545,7 +501,6 @@ body {
 </div>
 
 
-
 <!-- ==================================================
      การพัฒนาตนเอง
 ================================================== -->
@@ -569,7 +524,6 @@ body {
     </p>
 
 </div>
-
 
 
 <!-- ==================================================
@@ -603,28 +557,21 @@ body {
 </div>
 
 
-
 <!-- ==================================================
      คณะ สาขา และมหาวิทยาลัยที่สนใจศึกษาต่อ
 ================================================== -->
 
 <div class="university-section">
 
-
     <div class="university-title">
-
         คณะ สาขา และมหาวิทยาลัยที่สนใจศึกษาต่อ
-
     </div>
-
 
 
     <div class="university-container">
 
 
-        <!-- =========================================
-             มหาวิทยาลัยมหิดล
-        ========================================== -->
+        <!-- มหาวิทยาลัยมหิดล -->
 
         <div class="university-card">
 
@@ -644,10 +591,7 @@ body {
         </div>
 
 
-
-        <!-- =========================================
-             จุฬาลงกรณ์มหาวิทยาลัย
-        ========================================== -->
+        <!-- จุฬาลงกรณ์มหาวิทยาลัย -->
 
         <div class="university-card">
 
@@ -667,10 +611,7 @@ body {
         </div>
 
 
-
-        <!-- =========================================
-             มหาวิทยาลัยเชียงใหม่
-        ========================================== -->
+        <!-- มหาวิทยาลัยเชียงใหม่ -->
 
         <div class="university-card">
 
@@ -693,11 +634,23 @@ body {
     </div>
 
 </div>
-</body>
-   <!-- ปุ่มกลับหน้า Portfolio -->
-<div class="back">
-    <a href="index.html">🌷 กลับหน้า Portfolio</a>
+
+
 </div>
+
+
+<!-- ==================================================
+     ปุ่มกลับหน้า Portfolio
+================================================== -->
+
+<div class="back">
+
+    <a href="portfolio.html">
+        🌷 กลับหน้า Portfolio
+    </a>
+
+</div>
+
 
 </body>
 </html>
