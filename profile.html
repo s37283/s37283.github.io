@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ประวัติส่วนตัว | Portfolio</title>
+
+    <!-- ฟอนต์ Kanit -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: "Kanit", sans-serif;
+            background: linear-gradient(135deg, #ffd6e7, #d9f3ff, #fff3b0);
+            color: #5c4b51;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(214, 100, 150, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #e85d8f;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        /* รูปโปรไฟล์ */
+        .profile-image {
+            display: block;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #ffffff;
+            box-shadow: 0 8px 20px rgba(214, 100, 150, 0.3);
+            margin: 0 auto 30px;
+        }
+
+        /* กล่องข้อมูล */
+        .info-box {
+            background: #fff7fb;
+            border-radius: 18px;
+            padding: 20px 25px;
+            margin: 15px 0;
+            border-left: 6px solid #ff7eb3;
+            font-size: 18px;
+        }
+
+        .label {
+            color: #d94f82;
+            font-weight: 600;
+        }
+
+        /* งานอดิเรก */
+        .hobby-box {
+            background: #f7fbff;
+            border-radius: 18px;
+            padding: 20px 25px;
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 2;
+            border-left: 6px solid #8ac6ff;
+        }
+
+        .btn {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>👤 ประวัติส่วนตัว</h1>
+
+        <!-- ใส่รูปตรงนี้ -->
+        <img src="profile.jpg"
+             alt="รูปประวัติส่วนตัว"
+             class="profile-image">
+
+        <div class="info-box">
+            <span class="label">ชื่อ - นามสกุล :</span>
+            นางสาวชนภัทร ศิวิไล
+        </div>
+
+        <div class="info-box">
+            <span class="label">ชื่อเล่น :</span>
+            พลอย
+        </div>
+
+        <div class="info-box">
+            <span class="label">วัน/เดือน/ปีเกิด :</span>
+            9 กันยายน 2551
+        </div>
+
+        <div class="info-box">
+            <span class="label">หมู่เลือด :</span>
+            O
+        </div>
+
+        <div class="info-box">
+            <span class="label">เชื้อชาติ :</span>
+            ไทย
+        </div>
+
+        <div class="info-box">
+            <span class="label">สัญชาติ :</span>
+            ไทย
+        </div>
+
+        <div class="info-box">
+            <span class="label">ศาสนา :</span>
+            พุทธ
+        </div>
+
+        <div class="hobby-box">
+            <span class="label">🎨 งานอดิเรก</span>
+            <br>
+            📚 อ่านหนังสือ / นิยาย<br>
+            🎧 ฟังเพลง / สารคดี<br>
+            🏛️ ศึกษาเรื่องราวทางประวัติศาสตร์<br>
+            🍳 ทำอาหาร<br>
+            🎨 วาดรูป
+        </div>
+
+        <a href="portfolio.html" class="btn">
+            🌷 กลับหน้า Portfolio
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
