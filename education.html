@@ -1,1 +1,322 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>ประวัติการศึกษา</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Kanit", sans-serif;
+    background: linear-gradient(135deg, #fff0f6, #eef7ff);
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: #d63384;
+    margin-bottom: 60px;
+}
+
+/* เส้นไทม์ไลน์ */
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 175px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #222;
+    border-radius: 10px;
+}
+
+/* แต่ละรายการ */
+.item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 170px;
+    margin-bottom: 35px;
+}
+
+/* พื้นที่โลโก้ */
+.logo-box {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+}
+
+/* จุดบนเส้น */
+.dot {
+    position: absolute;
+    left: 164px;
+    width: 27px;
+    height: 27px;
+    background: #222;
+    border-radius: 50%;
+    border: 5px solid white;
+    z-index: 3;
+}
+
+/* ข้อความ */
+.text {
+    flex: 1;
+    padding-left: 55px;
+}
+
+.level {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.school {
+    font-size: 24px;
+    color: #555;
+}
+
+/* สีหัวข้อ */
+.item:nth-child(1) .level {
+    color: #e83e8c;
+}
+
+.item:nth-child(2) .level {
+    color: #6f42c1;
+}
+
+.item:nth-child(3) .level {
+    color: #0d6efd;
+}
+
+.item:nth-child(4) .level {
+    color: #198754;
+}
+
+.item:nth-child(5) .level {
+    color: #fd7e14;
+}
+
+.item:nth-child(6) .level {
+    color: #dc3545;
+}
+
+/* สำหรับโทรศัพท์ */
+@media (max-width: 700px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .timeline::before {
+        left: 80px;
+    }
+
+    .item {
+        min-height: 140px;
+    }
+
+    .logo-box {
+        width: 160px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .dot {
+        left: 69px;
+    }
+
+    .text {
+        padding-left: 30px;
+    }
+
+    .level {
+        font-size: 20px;
+    }
+
+    .school {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">
+        ประวัติการศึกษา
+    </div>
+
+    <div class="timeline">
+
+        <!-- อนุบาล 1 -->
+        <div class="item">
+            <div class="logo-box">
+                <img src="nongree.jpg" class="logo" alt="ศูนย์พัฒนาเด็กเล็กหนองรี">
+            </div>
+
+            <div class="dot"></div>
+
+            <div class="text">
+                <div class="level">
+                    ระดับอนุบาล 1
+                </div>
+
+                <div class="school">
+                    ศูนย์พัฒนาเด็กเล็กหนองรี
+                </div>
+            </div>
+        </div>
+
+
+        <!-- อนุบาล 2-3 -->
+        <div class="item">
+            <div class="logo-box">
+                <img src="boonprateep-primary.jpg"
+                     class="logo"
+                     alt="โรงเรียนบุญประทีปวิทยาคาร">
+            </div>
+
+            <div class="dot"></div>
+
+            <div class="text">
+                <div class="level">
+                    ระดับอนุบาล 2-3
+                </div>
+
+                <div class="school">
+                    โรงเรียนบุญประทีปวิทยาคาร
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ระดับประถมศึกษาตอนต้น -->
+        <div class="item">
+            <div class="logo-box">
+                <img src="boonprateep-primary.jpg"
+                     class="logo"
+                     alt="โรงเรียนบุญประทีปวิทยาคาร">
+            </div>
+
+            <div class="dot"></div>
+
+            <div class="text">
+                <div class="level">
+                    ระดับประถมศึกษาตอนต้น
+                </div>
+
+                <div class="school">
+                    โรงเรียนบุญประทีปวิทยาคาร
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ระดับประถมศึกษาตอนปลาย -->
+        <div class="item">
+            <div class="logo-box">
+                <img src="boonprateep-primary.jpg"
+                     class="logo"
+                     alt="โรงเรียนบุญประทีปวิทยาคาร">
+            </div>
+
+            <div class="dot"></div>
+
+            <div class="text">
+                <div class="level">
+                    ระดับประถมศึกษาตอนปลาย
+                </div>
+
+                <div class="school">
+                    โรงเรียนบุญประทีปวิทยาคาร
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ระดับมัธยมศึกษาตอนต้น -->
+        <div class="item">
+            <div class="logo-box">
+                <img src="boonprateep-secondary.jpg"
+                     class="logo"
+                     alt="โรงเรียนบุญประทีปวิทยาคาร">
+            </div>
+
+            <div class="dot"></div>
+
+            <div class="text">
+                <div class="level">
+                    ระดับมัธยมศึกษาตอนต้น
+                </div>
+
+                <div class="school">
+                    โรงเรียนบุญประทีปวิทยาคาร
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ระดับมัธยมศึกษาตอนปลาย -->
+        <div class="item">
+            <div class="logo-box">
+                <img src="baanbueng-industrial.jpg"
+                     class="logo"
+                     alt="โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์">
+            </div>
+
+            <div class="dot"></div>
+
+            <div class="text">
+                <div class="level">
+                    ระดับมัธยมศึกษาตอนปลาย
+                </div>
+
+                <div class="school">
+                    โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
