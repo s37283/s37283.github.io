@@ -125,12 +125,75 @@
                 0 3px 10px rgba(0, 0, 0, 0.05);
         }
 
+        /* =========================
+           ช่องทางการติดต่อ
+        ========================= */
+
+        .contact-box {
+            background: #fff7fb;
+
+            padding: 22px 25px;
+            margin-top: 25px;
+
+            border-radius: 18px;
+
+            border-left: 6px solid #ff69a8;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-title {
+            color: #e85d8f;
+
+            font-size: 24px;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            font-size: 18px;
+
+            line-height: 2;
+
+            padding: 5px 0;
+        }
+
+        .contact-label {
+            display: inline-block;
+
+            width: 120px;
+
+            color: #d94f82;
+
+            font-weight: 600;
+        }
+
+        /* ลิงก์ */
+        .contact-item a {
+            color: #555;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #ff3377;
+
+            text-decoration: underline;
+        }
+
         /* ปุ่มกลับ */
         .btn {
             display: block;
+
             width: fit-content;
 
             margin: 35px auto 0;
+
             padding: 12px 28px;
 
             background: linear-gradient(
@@ -140,11 +203,13 @@
             );
 
             color: white;
+
             text-decoration: none;
 
             border-radius: 30px;
 
             font-size: 18px;
+
             font-weight: 500;
 
             transition: 0.3s;
@@ -181,6 +246,19 @@
             .hobby-box {
                 font-size: 16px;
             }
+
+            .contact-title {
+                font-size: 21px;
+            }
+
+            .contact-item {
+                font-size: 16px;
+            }
+
+            .contact-label {
+                width: 100px;
+            }
+
         }
 
     </style>
@@ -193,17 +271,25 @@
 
     <div class="card">
 
-        <!-- หัวข้อ -->
+        <!-- =========================
+             หัวข้อ
+        ========================= -->
+
         <h1>👤 ประวัติส่วนตัว</h1>
 
 
-        <!-- รูปภาพ -->
+        <!-- =========================
+             รูปภาพ
+        ========================= -->
+
         <img src="IMG_20260907_184850.jpg"
              alt="รูปประวัติส่วนตัว"
              class="profile-image">
 
 
-        <!-- ข้อมูลส่วนตัว -->
+        <!-- =========================
+             ข้อมูลส่วนตัว
+        ========================= -->
 
         <div class="info-box">
             <span class="label">ชื่อ - นามสกุล :</span>
@@ -241,7 +327,9 @@
         </div>
 
 
-        <!-- งานอดิเรก -->
+        <!-- =========================
+             งานอดิเรก
+        ========================= -->
 
         <div class="hobby-box">
 
@@ -270,11 +358,95 @@
         </div>
 
 
-        <!-- ปุ่มกลับหน้า Portfolio -->
+        <!-- =========================
+             ช่องทางการติดต่อ
+        ========================= -->
+
+        <div class="contact-box">
+
+            <div class="contact-title">
+                🌸 ช่องทางการติดต่อ
+            </div>
+
+
+            <!-- Instagram -->
+            <div class="contact-item">
+
+                <span class="contact-label">
+                    📷 Instagram :
+                </span>
+
+                <a href="https://www.instagram.com/9yo1ppove/"
+                   target="_blank">
+
+                    9yo1ppove
+
+                </a>
+
+            </div>
+
+
+            <!-- Facebook -->
+            <div class="contact-item">
+
+                <span class="contact-label">
+                    📘 Facebook :
+                </span>
+
+                <a href="https://www.facebook.com/"
+                   target="_blank">
+
+                    Ppove Loye
+
+                </a>
+
+            </div>
+
+
+            <!-- Gmail 1 -->
+            <div class="contact-item">
+
+                <span class="contact-label">
+                    📧 Gmail :
+                </span>
+
+                <a href="mailto:s37283@banbung.ac.th">
+
+                    s37283@banbung.ac.th
+
+                </a>
+
+            </div>
+
+
+            <!-- Gmail 2 -->
+            <div class="contact-item">
+
+                <span class="contact-label">
+                    📧 Gmail :
+                </span>
+
+                <a href="mailto:stthephphithaks@gmail.com">
+
+                    stthephphithaks@gmail.com
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ปุ่มกลับหน้า Portfolio
+        ========================= -->
 
         <a href="portfolio.html" class="btn">
+
             🌷 กลับหน้า Portfolio
+
         </a>
+
 
     </div>
 
@@ -283,5 +455,3 @@
 </body>
 
 </html>
-
- 🌸
