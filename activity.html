@@ -1,1 +1,517 @@
 
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>กิจกรรมที่เข้าร่วม</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Kanit", sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #d9f3ff, #fff3b0);
+    color: #5c4b51;
+}
+
+/* ส่วนหัว */
+.header {
+    text-align: center;
+    padding: 70px 20px 45px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #e83e8c;
+    font-weight: 700;
+}
+
+.header p {
+    margin-top: 12px;
+    font-size: 22px;
+    color: #666;
+}
+
+/* เนื้อหา */
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* หัวข้อประเภท */
+.category {
+    margin: 55px 0 25px;
+    padding: 18px 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.category h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* สีหัวข้อแต่ละประเภท */
+.training h2 {
+    color: #e83e8c;
+}
+
+.competition h2 {
+    color: #6f42c1;
+}
+
+.volunteer h2 {
+    color: #198754;
+}
+
+/* การ์ดกิจกรรม */
+.activity-card {
+    background: white;
+    border-radius: 25px;
+    padding: 22px;
+    margin-bottom: 30px;
+
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* รูปเกียรติบัตร */
+.certificate {
+    width: 43%;
+    flex-shrink: 0;
+}
+
+.certificate img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* รายละเอียด */
+.details {
+    flex: 1;
+}
+
+.details h3 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    color: #444;
+}
+
+.details .date {
+    color: #e83e8c;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.details p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    color: #666;
+}
+
+/* รางวัล */
+.award {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: #fff0a8;
+    color: #8a6500;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ส่วนยังไม่มีข้อมูล */
+.no-data {
+    background: rgba(255,255,255,0.8);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    font-size: 19px;
+    color: #777;
+}
+
+/* ปุ่มกลับ */
+.back {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.back a {
+    display: inline-block;
+    background: #ff69a8;
+    color: white;
+    text-decoration: none;
+    padding: 16px 55px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: 500;
+
+    box-shadow: 0 5px 15px rgba(255,105,168,0.25);
+
+    transition: 0.3s;
+}
+
+.back a:hover {
+    background: #ff4f98;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,105,168,0.35);
+}
+
+/* มือถือ */
+@media (max-width: 700px) {
+
+    .header h1 {
+        font-size: 36px;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .activity-card {
+        display: block;
+        padding: 18px;
+    }
+
+    .certificate {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .details h3 {
+        font-size: 22px;
+    }
+
+    .details p {
+        font-size: 16px;
+    }
+
+    .category h2 {
+        font-size: 25px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- หัวข้อ -->
+<div class="header">
+
+    <h1>กิจกรรมที่เข้าร่วม</h1>
+
+    <p>
+        รวบรวมกิจกรรม ประสบการณ์ และเกียรติบัตรที่ภาคภูมิใจ
+    </p>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- ================================================= -->
+<!-- กิจกรรมประเภทอบรม -->
+<!-- ================================================= -->
+
+<div class="category training">
+    <h2>🩷 กิจกรรมประเภทอบรม / เรียนรู้</h2>
+</div>
+
+
+<!-- กิจกรรมที่ 1 -->
+
+<div class="activity-card">
+
+    <div class="certificate">
+        <img src="1000103776.jpg" alt="เกียรติบัตรโครงการเปิดบ้านแพทย์บูรพา">
+    </div>
+
+    <div class="details">
+
+        <h3>
+            โครงการเปิดบ้านแพทย์บูรพา
+            ประจำปีการศึกษา 2568
+        </h3>
+
+        <div class="date">
+            📅 วันที่ 8 กุมภาพันธ์ พ.ศ. 2569
+        </div>
+
+        <p>
+            ได้เข้าร่วมโครงการเปิดบ้านแพทย์บูรพา
+            ณ คณะแพทยศาสตร์ มหาวิทยาลัยบูรพา
+            เพื่อเรียนรู้เกี่ยวกับการศึกษาในสายแพทยศาสตร์
+            และเปิดโอกาสให้ได้สัมผัสบรรยากาศการเรียนรู้
+            ของคณะแพทยศาสตร์
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- กิจกรรมที่ 2 -->
+
+<div class="activity-card">
+
+    <div class="certificate">
+        <img src="1000103781.jpg" alt="งานเสวนาเปิดรั้วหมอจุฬา">
+    </div>
+
+    <div class="details">
+
+        <h3>
+            งานเสวนาเปิดรั้วหมอจุฬาฯ ครั้งที่ 35
+        </h3>
+
+        <div class="date">
+            📅 วันที่ 1 พฤศจิกายน พ.ศ. 2568
+        </div>
+
+        <p>
+            ได้เข้าร่วมงานเสวนาเปิดรั้วหมอจุฬาฯ
+            ณ คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+            เพื่อศึกษาข้อมูลเกี่ยวกับการเรียนแพทยศาสตร์
+            และเรียนรู้แนวทางการเตรียมตัวสำหรับการศึกษาต่อ
+            ในสายแพทย์
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- กิจกรรมที่ 3 -->
+
+<div class="activity-card">
+
+    <div class="certificate">
+        <img src="1000103777.jpg" alt="CMU Open House 2025">
+    </div>
+
+    <div class="details">
+
+        <h3>
+            CMU OPEN HOUSE 2025 ONLINE
+        </h3>
+
+        <div class="date">
+            📅 วันที่ 12 ตุลาคม พ.ศ. 2568
+        </div>
+
+        <p>
+            ได้เข้าร่วมกิจกรรม CMU OPEN HOUSE 2025 ONLINE
+            ของคณะแพทยศาสตร์ มหาวิทยาลัยเชียงใหม่
+            เพื่อค้นหาข้อมูลเกี่ยวกับการศึกษาต่อ
+            และทำความรู้จักกับแนวทางการเรียนในสายแพทยศาสตร์
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- กิจกรรมที่ 4 -->
+
+<div class="activity-card">
+
+    <div class="certificate">
+        <img src="1000103686.jpg" alt="การอบรมความปลอดภัยในสถานศึกษา">
+    </div>
+
+    <div class="details">
+
+        <h3>
+            การอบรมเชิงปฏิบัติการ
+            เสริมสร้างความปลอดภัยในสถานศึกษา
+        </h3>
+
+        <div class="date">
+            📅 วันที่ 21 พฤศจิกายน พ.ศ. 2567
+        </div>
+
+        <p>
+            ได้ผ่านการอบรมเชิงปฏิบัติการเสริมสร้าง
+            ความปลอดภัยในสถานศึกษา
+            โดยได้เรียนรู้เกี่ยวกับการป้องกันและระงับอัคคีภัย
+            รวมถึงการฝึกซ้อมแผนอพยพหนีไฟ
+            ซึ่งช่วยเสริมสร้างความรู้และทักษะในการดูแล
+            ความปลอดภัยของตนเองและผู้อื่น
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- กิจกรรมที่ 5 -->
+
+<div class="activity-card">
+
+    <div class="certificate">
+        <img src="1000103680.jpg" alt="อบรมแกนนำ อย น้อย">
+    </div>
+
+    <div class="details">
+
+        <h3>
+            โครงการอบรม “แกนนำ อย.น้อย”
+        </h3>
+
+        <div class="date">
+            📅 วันที่ 28 สิงหาคม พ.ศ. 2568
+        </div>
+
+        <p>
+            ได้เข้าร่วมโครงการอบรม “แกนนำ อย.น้อย”
+            เพื่อเรียนรู้เกี่ยวกับความรู้ด้านสุขภาพ
+            การเลือกใช้ผลิตภัณฑ์สุขภาพอย่างเหมาะสม
+            และการนำความรู้ที่ได้รับไปประยุกต์ใช้
+            ในชีวิตประจำวัน
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- กิจกรรมที่ 6 -->
+
+<div class="activity-card">
+
+    <div class="certificate">
+        <img src="1000103676.jpg" alt="วัยรุ่นยุคใหม่ใส่ใจสุขภาพจิต">
+    </div>
+
+    <div class="details">
+
+        <h3>
+            โครงการอบรม “วัยรุ่นยุคใหม่ ใส่ใจสุขภาพจิต”
+        </h3>
+
+        <div class="date">
+            📅 วันที่ 30 สิงหาคม พ.ศ. 2567
+        </div>
+
+        <p>
+            ได้เข้าร่วมโครงการอบรมเกี่ยวกับสุขภาพจิต
+            เพื่อเรียนรู้และสร้างความเข้าใจเกี่ยวกับ
+            การดูแลสุขภาพจิตของวัยรุ่น
+            รวมถึงการดูแลตนเองและการใช้ชีวิต
+            อย่างเหมาะสม
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- กิจกรรมประเภทแข่งขัน -->
+<!-- ================================================= -->
+
+<div class="category competition">
+    <h2>💜 กิจกรรมประเภทแข่งขัน</h2>
+</div>
+
+
+<div class="activity-card">
+
+    <div class="certificate">
+        <img src="1000103775.jpg" alt="การแข่งขันประกวดคำขวัญต่อต้านการทุจริต">
+    </div>
+
+    <div class="details">
+
+        <h3>
+            การแข่งขันประกวดคำขวัญต่อต้านการทุจริต
+        </h3>
+
+        <div class="date">
+            📅 วันที่ 8 สิงหาคม พ.ศ. 2568
+        </div>
+
+        <p>
+            ได้เข้าร่วมการแข่งขันประกวดคำขวัญ
+            ต่อต้านการทุจริต ระดับชั้นมัธยมศึกษาตอนปลาย
+            ซึ่งเป็นกิจกรรมที่ส่งเสริมความคิดสร้างสรรค์
+            และการมีส่วนร่วมในการสร้างจิตสำนึก
+            ด้านความซื่อสัตย์สุจริต
+        </p>
+
+        <span class="award">
+            🏆 รางวัลรองชนะเลิศ อันดับ 2
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- กิจกรรมประเภทจิตอาสา -->
+<!-- ================================================= -->
+
+<div class="category volunteer">
+    <h2>💚 กิจกรรมประเภทจิตอาสา</h2>
+</div>
+
+
+<div class="no-data">
+
+    🌱 ยังไม่มีเกียรติบัตรกิจกรรมจิตอาสาในขณะนี้
+    <br>
+    สามารถเพิ่มกิจกรรมและเกียรติบัตรในส่วนนี้ได้ภายหลัง
+
+</div>
+
+
+<!-- ปุ่มกลับ Portfolio -->
+
+<div class="back">
+
+    <a href="portfolio.html">
+        🌷 กลับหน้า Portfolio
+    </a>
+
+</div>
+
+
+</div>
+
+</body>
+  </html>
