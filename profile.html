@@ -8,13 +8,10 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-
     <title>ประวัติส่วนตัว | ชนภัทร ศิวิไล</title>
 
 
-    <!-- =========================
-         ฟอนต์ Kanit
-    ========================= -->
+    <!-- ฟอนต์ Kanit -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -29,14 +26,14 @@
 
     <style>
 
-        /* =========================
-           ตั้งค่าพื้นฐาน
-        ========================= */
-
         * {
             box-sizing: border-box;
         }
 
+
+        /* =========================
+           พื้นหลัง
+        ========================= */
 
         body {
 
@@ -93,8 +90,6 @@
         }
 
 
-        /* ปุ่มเมนู */
-
         .navbar a {
 
             text-decoration: none;
@@ -112,12 +107,8 @@
             font-weight: 500;
 
             transition: 0.3s;
-
-            border: 1px solid transparent;
         }
 
-
-        /* เมื่อนำเมาส์ไปวาง */
 
         .navbar a:hover {
 
@@ -139,7 +130,7 @@
 
 
         /* =========================
-           เนื้อหาหลัก
+           เนื้อหา
         ========================= */
 
         .container {
@@ -216,7 +207,7 @@
 
 
         /* =========================
-           กล่องข้อมูลส่วนตัว
+           กล่องข้อมูล
         ========================= */
 
         .info-box {
@@ -246,8 +237,6 @@
             transform: translateX(5px);
         }
 
-
-        /* ตัวหนังสือหัวข้อ */
 
         .label {
 
@@ -284,7 +273,98 @@
 
 
         /* =========================
-           ปุ่มกลับ Portfolio
+           ช่องทางการติดต่อ
+        ========================= */
+
+        .contact-box {
+
+            background: #fff7fb;
+
+            padding: 20px 25px;
+
+            margin-top: 25px;
+
+            border-radius: 15px;
+
+            border-left: 6px solid #ff9fc4;
+
+            box-shadow:
+                0 3px 10px
+                rgba(0, 0, 0, 0.05);
+        }
+
+
+        .contact-title {
+
+            color: #e85d8f;
+
+            font-size: 24px;
+
+            font-weight: 600;
+
+            text-align: center;
+
+            margin-bottom: 15px;
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 12px 5px;
+
+            border-bottom:
+                1px solid #f5d8e5;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+        }
+
+
+        .contact-item:last-child {
+
+            border-bottom: none;
+        }
+
+
+        .contact-label {
+
+            color: #6d5962;
+
+            font-weight: 500;
+
+            min-width: 110px;
+        }
+
+
+        .contact-item a {
+
+            color: #d94f82;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+
+            word-break: break-word;
+        }
+
+
+        .contact-item a:hover {
+
+            color: #ff758c;
+
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           ปุ่มกลับ
         ========================= */
 
         .btn {
@@ -359,8 +439,6 @@
             .card {
 
                 padding: 25px 18px;
-
-                border-radius: 20px;
             }
 
 
@@ -385,9 +463,27 @@
             }
 
 
-            .hobby-box {
+            .contact-item {
 
-                padding: 18px;
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 3px;
+
+                font-size: 15px;
+            }
+
+
+            .contact-label {
+
+                min-width: auto;
+            }
+
+
+            .contact-title {
+
+                font-size: 21px;
             }
 
 
@@ -408,239 +504,278 @@
 <body>
 
 
-    <!-- ==================================================
-         เมนูด้านบน
-    ================================================== -->
+<!-- ==================================================
+     เมนูด้านบน
+================================================== -->
 
-    <nav class="navbar">
+<nav class="navbar">
+
+    <a href="portfolio.html">
+        🏠 หน้าแรก
+    </a>
+
+    <a href="intro.html">
+        📖 คำนำ
+    </a>
+
+    <a href="profile.html">
+        👤 ประวัติส่วนตัว
+    </a>
+
+    <a href="education.html">
+        🎓 ประวัติการศึกษา
+    </a>
+
+    <a href="interest.html">
+        🔬 ความสนใจในการศึกษาต่อ
+    </a>
+
+    <a href="activity.html">
+        🏆 กิจกรรมที่เข้าร่วม
+    </a>
+
+    <a href="talent.html">
+        ⭐ ความสามารถพิเศษ
+    </a>
+
+</nav>
 
 
-        <!-- หน้าแรก -->
+<!-- ==================================================
+     เนื้อหาหลัก
+================================================== -->
 
-        <a href="portfolio.html">
-            🏠 หน้าแรก
-        </a>
+<div class="container">
 
-
-        <!-- คำนำ -->
-
-        <a href="intro.html">
-            📖 คำนำ
-        </a>
+    <div class="card">
 
 
-        <!-- ประวัติส่วนตัว -->
+        <!-- หัวข้อ -->
 
-        <a href="profile.html">
+        <h1>
             👤 ประวัติส่วนตัว
-        </a>
+        </h1>
 
 
-        <!-- ประวัติการศึกษา -->
+        <!-- รูปภาพ -->
 
-        <a href="education.html">
-            🎓 ประวัติการศึกษา
-        </a>
+        <img
+            src="IMG_20260907_184850.jpg"
+            alt="รูปประวัติส่วนตัว"
+            class="profile-image"
+        >
 
 
-        <!-- ความสนใจ -->
+        <!-- =========================
+             ข้อมูลส่วนตัว
+        ========================= -->
 
-        <a href="interest.html">
-            🔬 ความสนใจในการศึกษาต่อ
-        </a>
+        <div class="info-box">
 
+            <span class="label">
+                ชื่อ - นามสกุล :
+            </span>
 
-        <!-- กิจกรรม -->
-
-        <a href="activity.html">
-            🏆 กิจกรรมที่เข้าร่วม
-        </a>
-
-
-        <!-- ความสามารถพิเศษ -->
-
-        <a href="talent.html">
-            ⭐ ความสามารถพิเศษ
-        </a>
-
-
-    </nav>
-
-
-    <!-- ==================================================
-         เนื้อหาหลัก
-    ================================================== -->
-
-    <div class="container">
-
-
-        <div class="card">
-
-
-            <!-- =========================
-                 หัวข้อ
-            ========================= -->
-
-            <h1>
-                👤 ประวัติส่วนตัว
-            </h1>
-
-
-            <!-- =========================
-                 รูปภาพ
-            ========================= -->
-
-            <img
-                src="IMG_20260907_184850.jpg"
-                alt="รูปประวัติส่วนตัว"
-                class="profile-image"
-            >
-
-
-            <!-- =========================
-                 ข้อมูลส่วนตัว
-            ========================= -->
-
-
-            <div class="info-box">
-
-                <span class="label">
-                    ชื่อ - นามสกุล :
-                </span>
-
-                นางสาวชนภัทร ศิวิไล
-
-            </div>
-
-
-            <div class="info-box">
-
-                <span class="label">
-                    ชื่อเล่น :
-                </span>
-
-                พลอย
-
-            </div>
-
-
-            <div class="info-box">
-
-                <span class="label">
-                    วัน/เดือน/ปีเกิด :
-                </span>
-
-                9 กันยายน 2551
-
-            </div>
-
-
-            <div class="info-box">
-
-                <span class="label">
-                    หมู่เลือด :
-                </span>
-
-                O
-
-            </div>
-
-
-            <div class="info-box">
-
-                <span class="label">
-                    เชื้อชาติ :
-                </span>
-
-                ไทย
-
-            </div>
-
-
-            <div class="info-box">
-
-                <span class="label">
-                    สัญชาติ :
-                </span>
-
-                ไทย
-
-            </div>
-
-
-            <div class="info-box">
-
-                <span class="label">
-                    ศาสนา :
-                </span>
-
-                พุทธ
-
-            </div>
-
-
-            <!-- =========================
-                 งานอดิเรก
-            ========================= -->
-
-            <div class="hobby-box">
-
-
-                <span class="label">
-                    🎨 งานอดิเรก
-                </span>
-
-
-                <br>
-
-
-                📚 อ่านหนังสือ / นิยาย
-
-
-                <br>
-
-
-                🎧 ฟังเพลง / สารคดี
-
-
-                <br>
-
-
-                🏛️ ศึกษาเรื่องราวทางประวัติศาสตร์
-
-
-                <br>
-
-
-                🍳 ทำอาหาร
-
-
-                <br>
-
-
-                🎨 วาดรูป
-
-
-            </div>
-
-
-            <!-- =========================
-                 ปุ่มกลับหน้า Portfolio
-            ========================= -->
-
-            <a
-                href="portfolio.html"
-                class="btn"
-            >
-
-                🌷 กลับหน้า Portfolio
-
-            </a>
-
+            นางสาวชนภัทร ศิวิไล
 
         </div>
 
+
+        <div class="info-box">
+
+            <span class="label">
+                ชื่อเล่น :
+            </span>
+
+            พลอย
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span class="label">
+                วัน/เดือน/ปีเกิด :
+            </span>
+
+            9 กันยายน 2551
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span class="label">
+                หมู่เลือด :
+            </span>
+
+            O
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span class="label">
+                เชื้อชาติ :
+            </span>
+
+            ไทย
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span class="label">
+                สัญชาติ :
+            </span>
+
+            ไทย
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span class="label">
+                ศาสนา :
+            </span>
+
+            พุทธ
+
+        </div>
+
+
+        <!-- =========================
+             งานอดิเรก
+        ========================= -->
+
+        <div class="hobby-box">
+
+            <span class="label">
+                🎨 งานอดิเรก
+            </span>
+
+            <br>
+
+            📚 อ่านหนังสือ / นิยาย
+
+            <br>
+
+            🎧 ฟังเพลง / สารคดี
+
+            <br>
+
+            🏛️ ศึกษาเรื่องราวทางประวัติศาสตร์
+
+            <br>
+
+            🍳 ทำอาหาร
+
+            <br>
+
+            🎨 วาดรูป
+
+        </div>
+
+
+        <!-- =========================
+             ช่องทางการติดต่อ
+        ========================= -->
+
+        <div class="contact-box">
+
+            <div class="contact-title">
+                🌸 ช่องทางการติดต่อ
+            </div>
+
+
+            <!-- Instagram -->
+
+            <div class="contact-item">
+
+                <span class="contact-label">
+                    📷 Instagram :
+                </span>
+
+                <a
+                    href="https://www.instagram.com/9yo1ppove/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    9yo1ppove
+                </a>
+
+            </div>
+
+
+            <!-- Facebook -->
+
+            <div class="contact-item">
+
+                <span class="contact-label">
+                    📘 Facebook :
+                </span>
+
+                <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Ppove Loye
+                </a>
+
+            </div>
+
+
+            <!-- Gmail 1 -->
+
+            <div class="contact-item">
+
+                <span class="contact-label">
+                    📧 Gmail :
+                </span>
+
+                <a href="mailto:s37283@banbung.ac.th">
+                    s37283@banbung.ac.th
+                </a>
+
+            </div>
+
+
+            <!-- Gmail 2 -->
+
+            <div class="contact-item">
+
+                <span class="contact-label">
+                    📧 Gmail :
+                </span>
+
+                <a href="mailto:stthephphithaks@gmail.com">
+                    stthephphithaks@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ปุ่มกลับ Portfolio
+        ========================= -->
+
+        <a
+            href="portfolio.html"
+            class="btn"
+        >
+            🌷 กลับหน้า Portfolio
+        </a>
+
+
     </div>
+
+</div>
 
 
 </body>
