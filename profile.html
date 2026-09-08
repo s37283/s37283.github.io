@@ -2,205 +2,362 @@
 <html lang="th">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ประวัติส่วนตัว | ชนภัทร ศิวิไล</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- ฟอนต์ Kanit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>ประวัติส่วนตัว | Portfolio</title>
+
+
+    <!-- =========================
+         ฟอนต์ Kanit
+    ========================= -->
 
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
 
+
     <style>
+
+        /* =========================
+           ตั้งค่าพื้นฐาน
+        ========================= */
 
         * {
             box-sizing: border-box;
         }
 
         body {
-            margin: 0;
-            padding: 40px 20px;
-            font-family: "Kanit", sans-serif;
-            color: #5c4b51;
 
-            background: linear-gradient(
-                135deg,
-                #ffd6e7,
-                #d9f3ff,
-                #fff3b0
-            );
+            margin: 0;
+
+            font-family: "Kanit", sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffd6e7,
+                    #d9f3ff,
+                    #fff3b0
+                );
+
+            color: #5c4b51;
 
             min-height: 100vh;
         }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
 
-        /* กล่องหลัก */
-        .card {
-            background: rgba(255, 255, 255, 0.96);
-            padding: 40px;
-            border-radius: 30px;
+        /* =========================
+           เมนูด้านบน
+        ========================= */
 
-            border: 4px solid #ffffff;
+        .navbar {
 
-            box-shadow:
-                0 15px 35px rgba(214, 100, 150, 0.25);
-        }
+            width: 100%;
 
-        /* หัวข้อ */
-        h1 {
-            text-align: center;
-            color: #e85d8f;
-            font-size: 38px;
-            margin: 0 0 30px;
-        }
+            background: rgba(255, 255, 255, 0.95);
 
-        /* รูปภาพกรอบสี่เหลี่ยม */
-        .profile-image {
-            display: block;
-
-            width: 300px;
-            height: 380px;
-
-            object-fit: cover;
-
-            border-radius: 15px;
-            border: 6px solid #ffffff;
-
-            margin: 0 auto 35px;
+            padding: 15px 10px;
 
             box-shadow:
-                0 10px 25px rgba(214, 100, 150, 0.3);
+                0 3px 12px rgba(0, 0, 0, 0.12);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
         }
 
-        /* กล่องข้อมูล */
-        .info-box {
-            background: #fff7fb;
 
-            padding: 16px 20px;
-            margin: 14px 0;
+        .navbar a {
 
-            border-radius: 15px;
+            text-decoration: none;
 
-            border-left: 6px solid #ff7eb3;
+            color: #d94f82;
 
-            font-size: 18px;
+            background: #fff0f6;
 
-            box-shadow:
-                0 3px 10px rgba(0, 0, 0, 0.05);
+            padding: 8px 14px;
+
+            border-radius: 20px;
+
+            font-size: 15px;
+
+            font-weight: 500;
 
             transition: 0.3s;
         }
 
-        .info-box:hover {
-            transform: translateX(5px);
+
+        .navbar a:hover {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff7eb3,
+                    #ff758c
+                );
+
+            color: white;
+
+            transform: translateY(-2px);
         }
 
-        .label {
-            color: #d94f82;
-            font-weight: 600;
+
+        /* =========================
+           เนื้อหาหลัก
+        ========================= */
+
+        .container {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 40px 20px;
         }
 
-        /* งานอดิเรก */
-        .hobby-box {
-            background: #f3faff;
 
-            padding: 20px 25px;
-            margin-top: 20px;
+        /* =========================
+           กล่องหลัก
+        ========================= */
 
-            border-radius: 15px;
+        .card {
 
-            border-left: 6px solid #7dbfff;
+            background:
+                rgba(255, 255, 255, 0.95);
 
-            font-size: 18px;
-            line-height: 2;
+            padding: 40px;
+
+            border-radius: 25px;
+
+            border: 3px solid white;
 
             box-shadow:
-                0 3px 10px rgba(0, 0, 0, 0.05);
+                0 10px 30px
+                rgba(214, 100, 150, 0.2);
         }
+
+
+        /* =========================
+           หัวข้อ
+        ========================= */
+
+        h1 {
+
+            text-align: center;
+
+            color: #e85d8f;
+
+            font-size: 36px;
+
+            margin-top: 0;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           รูปโปรไฟล์
+        ========================= */
+
+        .profile-image {
+
+            width: 220px;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 6px solid white;
+
+            display: block;
+
+            margin: 0 auto 30px;
+
+            box-shadow:
+                0 8px 20px
+                rgba(214, 100, 150, 0.3);
+        }
+
+
+        /* =========================
+           ข้อมูลส่วนตัว
+        ========================= */
+
+        .info-box {
+
+            background: #fff7fb;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            border: 2px solid white;
+
+            box-shadow:
+                0 5px 15px
+                rgba(214, 100, 150, 0.12);
+        }
+
+
+        .info-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            padding: 12px 5px;
+
+            border-bottom:
+                1px solid #f5d8e5;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        .info-item:last-child {
+
+            border-bottom: none;
+        }
+
+
+        .info-label {
+
+            color: #d94f82;
+
+            font-weight: 500;
+
+            min-width: 170px;
+        }
+
 
         /* =========================
            ช่องทางการติดต่อ
         ========================= */
 
         .contact-box {
+
+            margin-top: 30px;
+
+            padding: 25px;
+
             background: #fff7fb;
 
-            padding: 22px 25px;
-            margin-top: 25px;
+            border-radius: 20px;
 
-            border-radius: 18px;
-
-            border-left: 6px solid #ff69a8;
+            border: 2px solid white;
 
             box-shadow:
-                0 3px 10px rgba(0, 0, 0, 0.05);
+                0 5px 15px
+                rgba(214, 100, 150, 0.15);
         }
 
+
         .contact-title {
+
             color: #e85d8f;
 
             font-size: 24px;
 
             font-weight: 600;
 
-            margin-bottom: 15px;
+            text-align: center;
+
+            margin-bottom: 20px;
         }
+
 
         .contact-item {
-            font-size: 18px;
 
-            line-height: 2;
+            display: flex;
 
-            padding: 5px 0;
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 12px 5px;
+
+            border-bottom:
+                1px solid #f5d8e5;
+
+            font-size: 17px;
         }
+
+
+        .contact-item:last-child {
+
+            border-bottom: none;
+        }
+
 
         .contact-label {
-            display: inline-block;
 
-            width: 120px;
+            font-weight: 500;
 
-            color: #d94f82;
+            color: #6d5962;
 
-            font-weight: 600;
+            min-width: 110px;
         }
 
-        /* ลิงก์ */
+
         .contact-item a {
-            color: #555;
+
+            color: #d94f82;
 
             text-decoration: none;
 
             transition: 0.3s;
         }
 
+
         .contact-item a:hover {
-            color: #ff3377;
+
+            color: #ff758c;
 
             text-decoration: underline;
         }
 
-        /* ปุ่มกลับ */
+
+        /* =========================
+           ปุ่มกลับ Portfolio
+        ========================= */
+
         .btn {
+
             display: block;
 
             width: fit-content;
 
-            margin: 35px auto 0;
+            margin: 30px auto 0;
 
-            padding: 12px 28px;
+            padding: 12px 25px;
 
-            background: linear-gradient(
-                135deg,
-                #ff7eb3,
-                #ff758c
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff7eb3,
+                    #ff758c
+                );
 
             color: white;
 
@@ -213,244 +370,380 @@
             font-weight: 500;
 
             transition: 0.3s;
+
+            box-shadow:
+                0 5px 15px
+                rgba(255, 117, 140, 0.25);
         }
 
+
         .btn:hover {
+
             transform: scale(1.05);
 
             box-shadow:
-                0 8px 18px rgba(255, 117, 140, 0.3);
+                0 8px 20px
+                rgba(255, 117, 140, 0.35);
         }
 
-        /* ปรับหน้าจอมือถือ */
+
+        /* =========================
+           รองรับมือถือ
+        ========================= */
+
         @media (max-width: 600px) {
 
-            body {
-                padding: 20px 10px;
+            .navbar {
+
+                padding: 10px 5px;
+
+                gap: 5px;
             }
+
+
+            .navbar a {
+
+                font-size: 13px;
+
+                padding: 7px 10px;
+            }
+
+
+            .container {
+
+                padding: 25px 15px;
+            }
+
 
             .card {
+
                 padding: 25px 18px;
+
+                border-radius: 20px;
             }
+
 
             h1 {
-                font-size: 30px;
+
+                font-size: 28px;
             }
+
 
             .profile-image {
-                width: 230px;
-                height: 300px;
+
+                width: 180px;
+
+                height: 180px;
             }
 
-            .info-box,
-            .hobby-box {
+
+            .info-item {
+
+                flex-direction: column;
+
+                gap: 2px;
+
                 font-size: 16px;
             }
 
+
+            .info-label {
+
+                min-width: auto;
+            }
+
+
+            .contact-item {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 3px;
+
+                font-size: 15px;
+            }
+
+
+            .contact-label {
+
+                min-width: auto;
+            }
+
+
             .contact-title {
+
                 font-size: 21px;
             }
 
-            .contact-item {
-                font-size: 16px;
-            }
 
-            .contact-label {
-                width: 100px;
+            .btn {
+
+                font-size: 16px;
+
+                padding: 10px 20px;
             }
 
         }
 
     </style>
+
 </head>
 
 
 <body>
 
-<div class="container">
 
-    <div class="card">
+    <!-- ==================================================
+         เมนูด้านบน
+         ใช้เมนูนี้เหมือนกันในทุกหน้า
+    ================================================== -->
 
-        <!-- =========================
-             หัวข้อ
-        ========================= -->
+    <nav class="navbar">
 
-        <h1>👤 ประวัติส่วนตัว</h1>
-
-
-        <!-- =========================
-             รูปภาพ
-        ========================= -->
-
-        <img src="IMG_20260907_184850.jpg"
-             alt="รูปประวัติส่วนตัว"
-             class="profile-image">
-
-
-        <!-- =========================
-             ข้อมูลส่วนตัว
-        ========================= -->
-
-        <div class="info-box">
-            <span class="label">ชื่อ - นามสกุล :</span>
-            นางสาวชนภัทร ศิวิไล
-        </div>
-
-        <div class="info-box">
-            <span class="label">ชื่อเล่น :</span>
-            พลอย
-        </div>
-
-        <div class="info-box">
-            <span class="label">วัน/เดือน/ปีเกิด :</span>
-            9 กันยายน 2551
-        </div>
-
-        <div class="info-box">
-            <span class="label">หมู่เลือด :</span>
-            O
-        </div>
-
-        <div class="info-box">
-            <span class="label">เชื้อชาติ :</span>
-            ไทย
-        </div>
-
-        <div class="info-box">
-            <span class="label">สัญชาติ :</span>
-            ไทย
-        </div>
-
-        <div class="info-box">
-            <span class="label">ศาสนา :</span>
-            พุทธ
-        </div>
-
-
-        <!-- =========================
-             งานอดิเรก
-        ========================= -->
-
-        <div class="hobby-box">
-
-            <span class="label">🎨 งานอดิเรก</span>
-
-            <br>
-
-            📚 อ่านหนังสือ / นิยาย
-
-            <br>
-
-            🎧 ฟังเพลง / สารคดี
-
-            <br>
-
-            🏛️ ศึกษาเรื่องราวทางประวัติศาสตร์
-
-            <br>
-
-            🍳 ทำอาหาร
-
-            <br>
-
-            🎨 วาดรูป
-
-        </div>
-
-
-        <!-- =========================
-             ช่องทางการติดต่อ
-        ========================= -->
-
-        <div class="contact-box">
-
-            <div class="contact-title">
-                🌸 ช่องทางการติดต่อ
-            </div>
-
-
-            <!-- Instagram -->
-            <div class="contact-item">
-
-                <span class="contact-label">
-                    📷 Instagram :
-                </span>
-
-                <a href="https://www.instagram.com/9yo1ppove/"
-                   target="_blank">
-
-                    9yo1ppove
-
-                </a>
-
-            </div>
-
-
-            <!-- Facebook -->
-            <div class="contact-item">
-
-                <span class="contact-label">
-                    📘 Facebook :
-                </span>
-
-                <a href="https://www.facebook.com/"
-                   target="_blank">
-
-                    Ppove Loye
-
-                </a>
-
-            </div>
-
-
-            <!-- Gmail 1 -->
-            <div class="contact-item">
-
-                <span class="contact-label">
-                    📧 Gmail :
-                </span>
-
-                <a href="mailto:s37283@banbung.ac.th">
-
-                    s37283@banbung.ac.th
-
-                </a>
-
-            </div>
-
-
-            <!-- Gmail 2 -->
-            <div class="contact-item">
-
-                <span class="contact-label">
-                    📧 Gmail :
-                </span>
-
-                <a href="mailto:stthephphithaks@gmail.com">
-
-                    stthephphithaks@gmail.com
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- =========================
-             ปุ่มกลับหน้า Portfolio
-        ========================= -->
-
-        <a href="portfolio.html" class="btn">
-
-            🌷 กลับหน้า Portfolio
-
+        <a href="portfolio.html">
+            🏠 หน้าแรก
         </a>
 
+        <a href="intro.html">
+            📖 คำนำ
+        </a>
+
+        <a href="profile.html">
+            👤 ประวัติส่วนตัว
+        </a>
+
+        <a href="education.html">
+            🎓 ประวัติการศึกษา
+        </a>
+
+        <a href="interest.html">
+            🔬 ความสนใจในการศึกษาต่อ
+        </a>
+
+        <a href="activity.html">
+            🏆 กิจกรรมที่เข้าร่วม
+        </a>
+
+        <a href="talent.html">
+            ⭐ ความสามารถพิเศษ
+        </a>
+
+    </nav>
+
+
+    <!-- ==================================================
+         เนื้อหาหลัก
+    ================================================== -->
+
+    <div class="container">
+
+        <div class="card">
+
+
+            <!-- หัวข้อ -->
+
+            <h1>
+                🌸 ประวัติส่วนตัว 🌸
+            </h1>
+
+
+            <!-- รูปโปรไฟล์ -->
+
+            <img
+                src="IMG_20260907_184850.jpg"
+                alt="รูปโปรไฟล์"
+                class="profile-image"
+            >
+
+
+            <!-- =========================
+                 ข้อมูลส่วนตัว
+            ========================= -->
+
+            <div class="info-box">
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        👤 ชื่อ - นามสกุล :
+                    </span>
+
+                    <span>
+                        นางสาวชนภัทร ศิวิไล
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        💗 ชื่อเล่น :
+                    </span>
+
+                    <span>
+                        พลอย
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        🎂 วัน/เดือน/ปีเกิด :
+                    </span>
+
+                    <span>
+                        9 กันยายน 2551
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        🩸 หมู่เลือด :
+                    </span>
+
+                    <span>
+                        O
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        🌏 เชื้อชาติ :
+                    </span>
+
+                    <span>
+                        ไทย
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        🏛️ ศาสนา :
+                    </span>
+
+                    <span>
+                        พุทธ
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =========================
+                 ช่องทางการติดต่อ
+            ========================= -->
+
+            <div class="contact-box">
+
+
+                <div class="contact-title">
+                    🌸 ช่องทางการติดต่อ
+                </div>
+
+
+                <!-- Instagram -->
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        📷 Instagram :
+                    </span>
+
+                    <a
+                        href="https://www.instagram.com/9yo1ppove/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        9yo1ppove
+                    </a>
+
+                </div>
+
+
+                <!-- Facebook -->
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        📘 Facebook :
+                    </span>
+
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ppove Loye
+                    </a>
+
+                </div>
+
+
+                <!-- Gmail 1 -->
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        📧 Gmail :
+                    </span>
+
+                    <a href="mailto:s37283@banbung.ac.th">
+                        s37283@banbung.ac.th
+                    </a>
+
+                </div>
+
+
+                <!-- Gmail 2 -->
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        📧 Gmail :
+                    </span>
+
+                    <a href="mailto:stthephphithaks@gmail.com">
+                        stthephphithaks@gmail.com
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =========================
+                 ปุ่มกลับหน้า Portfolio
+            ========================= -->
+
+            <a
+                href="portfolio.html"
+                class="btn"
+            >
+                🌷 กลับหน้า Portfolio
+            </a>
+
+
+        </div>
 
     </div>
 
-</div>
 
 </body>
 
