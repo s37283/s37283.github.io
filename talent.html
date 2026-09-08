@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ความสามารถพิเศษ</title>
+
   <!-- ดึงฟอนต์ Kanit จาก Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +19,7 @@
     }
 
     body {
-      background-color: #fce4ec; /* พื้นหลังสีชมพูพาสเทลตามภาพตัวอย่าง */
+      background-color: #fce4ec;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,13 +32,13 @@
       max-width: 600px;
     }
 
-    /* === สไตล์ส่วนหัวข้อแบบใหม่ตามรูปภาพ === */
+    /* === หัวข้อ === */
     .header-card {
-      background-color: #ffffff; /* การ์ดสีขาว */
-      border-radius: 20px; /* มุมโค้งมนสวยงาม */
+      background-color: #ffffff;
+      border-radius: 20px;
       padding: 24px 28px;
       margin-bottom: 25px;
-      box-shadow: 0 4px 15px rgba(233, 30, 99, 0.08); /* เงาฟุ้งนุ่มๆ */
+      box-shadow: 0 4px 15px rgba(233, 30, 99, 0.08);
       display: flex;
       align-items: center;
       gap: 12px;
@@ -51,13 +52,13 @@
     }
 
     .title-text {
-      color: #ff3377; /* สีชมพูสดใสตามแบบ */
+      color: #ff3377;
       font-size: 28px;
-      font-weight: 800; /* ตัวหนาพิเศษ */
+      font-weight: 800;
       letter-spacing: 0.5px;
     }
 
-    /* === ส่วนการ์ดแสดงกราฟ === */
+    /* === การ์ดกราฟ === */
     .chart-card {
       background-color: #ffffff;
       border-radius: 20px;
@@ -88,7 +89,7 @@
     .bar-container {
       flex: 1;
       height: 36px;
-      background-color: #f8bbd0; /* สีแท่งส่วนที่เหลือ */
+      background-color: #f8bbd0;
       border-radius: 4px;
       display: flex;
       overflow: hidden;
@@ -96,10 +97,10 @@
 
     .bar-fill {
       height: 100%;
-      background-color: #ff3377; /* สีแท่งคะแนนหลัก */
+      background-color: #ff3377;
     }
 
-    /* สเกลตัวเลขด้านล่าง 0 - 100 */
+    /* สเกล 0 - 100 */
     .scale-container {
       display: flex;
       margin-left: 140px;
@@ -109,13 +110,68 @@
       font-size: 13px;
       font-weight: 600;
     }
+
+    /* === ปุ่มกลับหน้า Portfolio === */
+    .back {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .back a {
+      display: inline-block;
+      background: #ff69a8;
+      color: white;
+      text-decoration: none;
+      padding: 16px 55px;
+      border-radius: 50px;
+      font-size: 22px;
+      font-weight: 500;
+      box-shadow: 0 5px 15px rgba(255, 105, 168, 0.25);
+      transition: 0.3s;
+    }
+
+    .back a:hover {
+      background: #ff4f98;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 105, 168, 0.35);
+    }
+
+    /* === รองรับหน้าจอมือถือ === */
+    @media (max-width: 600px) {
+
+      .header-card {
+        padding: 20px;
+      }
+
+      .title-text {
+        font-size: 24px;
+      }
+
+      .label {
+        width: 115px;
+        font-size: 13px;
+        padding-right: 10px;
+      }
+
+      .scale-container {
+        margin-left: 115px;
+      }
+
+      .back a {
+        font-size: 19px;
+        padding: 14px 40px;
+      }
+    }
+
   </style>
 </head>
+
 <body>
 
   <div class="container">
     
-    <!-- หัวข้อแบบการ์ดสีขาว + ไอคอนหัวใจ (สไตล์ตามรูปภาพใหม่) -->
+    <!-- หัวข้อ -->
     <div class="header-card">
       <span class="heart-icon">💖</span>
       <h1 class="title-text">ความสามารถพิเศษ</h1>
@@ -123,11 +179,13 @@
 
     <!-- ส่วนกราฟแสดงความสามารถ -->
     <div class="chart-card">
+
       <div class="chart-container">
         
         <!-- รายการที่ 1 -->
         <div class="chart-row">
           <div class="label">จิตอาสา</div>
+
           <div class="bar-container">
             <div class="bar-fill" style="width: 85%;"></div>
           </div>
@@ -136,6 +194,7 @@
         <!-- รายการที่ 2 -->
         <div class="chart-row">
           <div class="label">แก้ไขปัญหาเฉพาะหน้า</div>
+
           <div class="bar-container">
             <div class="bar-fill" style="width: 70%;"></div>
           </div>
@@ -144,6 +203,7 @@
         <!-- รายการที่ 3 -->
         <div class="chart-row">
           <div class="label">ทำงานร่วมกับผู้อื่น</div>
+
           <div class="bar-container">
             <div class="bar-fill" style="width: 84%;"></div>
           </div>
@@ -152,6 +212,7 @@
         <!-- รายการที่ 4 -->
         <div class="chart-row">
           <div class="label">ความเป็นผู้นำ</div>
+
           <div class="bar-container">
             <div class="bar-fill" style="width: 83%;"></div>
           </div>
@@ -168,24 +229,17 @@
         </div>
 
       </div>
+
+    </div>
+
+    <!-- ปุ่มกลับหน้า Portfolio -->
+    <div class="back">
+      <a href="portfolio.html">
+        🌷 กลับหน้า Portfolio
+      </a>
     </div>
 
   </div>
-<!-- ปุ่มกลับ Portfolio -->
-
-<div class="back">
-
-    <a href="portfolio.html">
-        🌷 กลับหน้า Portfolio
-    </a>
-
-</div>
-
-
-</div>
 
 </body>
 </html>
-</body>
-</html>
-
