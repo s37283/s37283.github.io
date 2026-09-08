@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>กิจกรรมที่เข้าร่วม</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>กิจกรรมที่เข้าร่วม | Portfolio</title>
+
+<!-- Google Font : Kanit -->
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
 
 <style>
 
@@ -15,53 +28,177 @@
 }
 
 body {
+
     margin: 0;
+
     font-family: "Kanit", sans-serif;
-    background: linear-gradient(135deg, #ffd6e7, #d9f3ff, #fff3b0);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #d9f3ff,
+            #fff3b0
+        );
+
     color: #5c4b51;
+
+    min-height: 100vh;
 }
 
-/* ส่วนหัว */
+
+/* ==================================================
+   เมนูด้านบน
+================================================== */
+
+.navbar {
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 15px 10px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.12);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.navbar a {
+
+    text-decoration: none;
+
+    color: #d94f82;
+
+    background: #fff0f6;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.navbar a:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7eb3,
+            #ff758c
+        );
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(255, 117, 140, 0.25);
+}
+
+
+/* ==================================================
+   ส่วนหัว
+================================================== */
+
 .header {
+
     text-align: center;
+
     padding: 70px 20px 45px;
 }
 
+
 .header h1 {
+
     margin: 0;
+
     font-size: 48px;
+
     color: #e83e8c;
+
     font-weight: 700;
 }
 
+
 .header p {
+
     margin-top: 12px;
+
     font-size: 22px;
+
     color: #666;
 }
 
-/* เนื้อหา */
+
+/* ==================================================
+   เนื้อหา
+================================================== */
+
 .container {
+
     width: 90%;
+
     max-width: 1150px;
+
     margin: auto;
 }
 
-/* หัวข้อประเภท */
+
+/* ==================================================
+   หัวข้อประเภท
+================================================== */
+
 .category {
+
     margin: 55px 0 25px;
+
     padding: 18px 25px;
+
     border-radius: 20px;
-    background: rgba(255,255,255,0.85);
-    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+    background:
+        rgba(255,255,255,0.85);
+
+    box-shadow:
+        0 5px 18px
+        rgba(0,0,0,0.08);
 }
 
+
 .category h2 {
+
     margin: 0;
+
     font-size: 30px;
 }
 
+
 /* สีหัวข้อแต่ละประเภท */
+
 .training h2 {
     color: #e83e8c;
 }
@@ -74,161 +211,371 @@ body {
     color: #198754;
 }
 
-/* การ์ดกิจกรรม */
+
+/* ==================================================
+   การ์ดกิจกรรม
+================================================== */
+
 .activity-card {
+
     background: white;
+
     border-radius: 25px;
+
     padding: 22px;
+
     margin-bottom: 30px;
 
     display: flex;
+
     gap: 30px;
+
     align-items: center;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.10);
 
     transition: 0.3s;
 }
 
+
 .activity-card:hover {
+
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.15);
 }
 
-/* รูปเกียรติบัตร */
+
+/* ==================================================
+   รูปเกียรติบัตร
+================================================== */
+
 .certificate {
+
     width: 43%;
+
     flex-shrink: 0;
 }
 
+
 .certificate img {
+
     width: 100%;
+
     border-radius: 15px;
+
     display: block;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    box-shadow:
+        0 4px 12px
+        rgba(0,0,0,0.15);
 }
 
-/* รายละเอียด */
+
+/* ==================================================
+   รายละเอียด
+================================================== */
+
 .details {
+
     flex: 1;
 }
 
+
 .details h3 {
+
     margin: 0 0 12px;
+
     font-size: 26px;
+
     color: #444;
 }
 
+
 .details .date {
+
     color: #e83e8c;
+
     font-size: 18px;
+
     margin-bottom: 10px;
 }
 
+
 .details p {
+
     font-size: 18px;
+
     line-height: 1.8;
+
     margin: 0;
+
     color: #666;
 }
 
-/* รางวัล */
+
+/* ==================================================
+   รางวัล
+================================================== */
+
 .award {
+
     display: inline-block;
+
     margin-top: 15px;
+
     padding: 8px 18px;
+
     border-radius: 30px;
+
     background: #fff0a8;
+
     color: #8a6500;
+
     font-size: 18px;
+
     font-weight: 500;
 }
 
-/* ส่วนยังไม่มีข้อมูล */
+
+.volunteer-tag {
+
+    background: #d9f5e5;
+
+    color: #198754;
+}
+
+
+/* ==================================================
+   ส่วนยังไม่มีข้อมูล
+================================================== */
+
 .no-data {
-    background: rgba(255,255,255,0.8);
+
+    background:
+        rgba(255,255,255,0.8);
+
     border-radius: 20px;
+
     padding: 30px;
+
     text-align: center;
+
     font-size: 19px;
+
     color: #777;
 }
 
-/* ปุ่มกลับ */
+
+/* ==================================================
+   ปุ่มกลับ
+================================================== */
+
 .back {
+
     text-align: center;
+
     margin: 60px 0;
 }
 
+
 .back a {
+
     display: inline-block;
+
     background: #ff69a8;
+
     color: white;
+
     text-decoration: none;
+
     padding: 16px 55px;
+
     border-radius: 50px;
+
     font-size: 22px;
+
     font-weight: 500;
 
-    box-shadow: 0 5px 15px rgba(255,105,168,0.25);
+    box-shadow:
+        0 5px 15px
+        rgba(255,105,168,0.25);
 
     transition: 0.3s;
 }
 
+
 .back a:hover {
+
     background: #ff4f98;
+
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255,105,168,0.35);
+
+    box-shadow:
+        0 8px 20px
+        rgba(255,105,168,0.35);
 }
 
-/* มือถือ */
+
+/* ==================================================
+   มือถือ
+================================================== */
+
 @media (max-width: 700px) {
 
+    .navbar {
+
+        padding: 10px 5px;
+
+        gap: 5px;
+    }
+
+
+    .navbar a {
+
+        font-size: 13px;
+
+        padding: 7px 10px;
+    }
+
+
+    .header {
+
+        padding: 45px 20px 35px;
+    }
+
+
     .header h1 {
+
         font-size: 36px;
     }
 
+
     .header p {
+
         font-size: 18px;
     }
 
+
     .container {
+
         width: 94%;
     }
 
+
     .activity-card {
+
         display: block;
+
         padding: 18px;
     }
 
+
     .certificate {
+
         width: 100%;
+
         margin-bottom: 20px;
     }
 
+
     .details h3 {
+
         font-size: 22px;
     }
 
+
     .details p {
+
         font-size: 16px;
     }
 
+
+    .details .date {
+
+        font-size: 16px;
+    }
+
+
     .category h2 {
+
         font-size: 25px;
     }
+
+
+    .back {
+
+        margin: 40px 0 50px;
+    }
+
+
+    .back a {
+
+        padding: 14px 40px;
+
+        font-size: 20px;
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
-<!-- หัวข้อ -->
+
+<!-- ==================================================
+     เมนูด้านบน
+================================================== -->
+
+<nav class="navbar">
+
+    <a href="portfolio.html">
+        🏠 หน้าแรก
+    </a>
+
+    <a href="intro.html">
+        📖 คำนำ
+    </a>
+
+    <a href="profile.html">
+        👤 ประวัติส่วนตัว
+    </a>
+
+    <a href="education.html">
+        🎓 ประวัติการศึกษา
+    </a>
+
+    <a href="interest.html">
+        🔬 ความสนใจในการศึกษาต่อ
+    </a>
+
+    <a href="activity.html">
+        🏆 กิจกรรมที่เข้าร่วม
+    </a>
+
+    <a href="talent.html">
+        ⭐ ความสามารถพิเศษ
+    </a>
+
+</nav>
+
+
+<!-- ==================================================
+     ส่วนหัว
+================================================== -->
+
 <div class="header">
 
-    <h1>กิจกรรมที่เข้าร่วม</h1>
+    <h1>
+        กิจกรรมที่เข้าร่วม
+    </h1>
 
     <p>
         รวบรวมกิจกรรม ประสบการณ์ และเกียรติบัตรที่ภาคภูมิใจ
@@ -240,12 +587,16 @@ body {
 <div class="container">
 
 
-<!-- ================================================= -->
-<!-- กิจกรรมประเภทอบรม -->
-<!-- ================================================= -->
+<!-- =================================================
+     กิจกรรมประเภทอบรม
+================================================== -->
 
 <div class="category training">
-    <h2>🩷 กิจกรรมประเภทอบรม / เรียนรู้</h2>
+
+    <h2>
+        🩷 กิจกรรมประเภทอบรม / เรียนรู้
+    </h2>
+
 </div>
 
 
@@ -254,8 +605,14 @@ body {
 <div class="activity-card">
 
     <div class="certificate">
-        <img src="IMG_20260907_235624.jpg" alt="เกียรติบัตรโครงการเปิดบ้านแพทย์บูรพา">
+
+        <img
+            src="IMG_20260907_235624.jpg"
+            alt="เกียรติบัตรโครงการเปิดบ้านแพทย์บูรพา"
+        >
+
     </div>
+
 
     <div class="details">
 
@@ -286,8 +643,14 @@ body {
 <div class="activity-card">
 
     <div class="certificate">
-        <img src="IMG_20260908_000344.jpg" alt="งานเสวนาเปิดรั้วหมอจุฬา">
+
+        <img
+            src="IMG_20260908_000344.jpg"
+            alt="งานเสวนาเปิดรั้วหมอจุฬา"
+        >
+
     </div>
+
 
     <div class="details">
 
@@ -317,8 +680,14 @@ body {
 <div class="activity-card">
 
     <div class="certificate">
-        <img src="IMG_20260907_235643.jpg" alt="CMU Open House 2025">
+
+        <img
+            src="IMG_20260907_235643.jpg"
+            alt="CMU Open House 2025"
+        >
+
     </div>
+
 
     <div class="details">
 
@@ -347,8 +716,14 @@ body {
 <div class="activity-card">
 
     <div class="certificate">
-        <img src="IMG_20260907_233044_1.jpg" alt="การอบรมความปลอดภัยในสถานศึกษา">
+
+        <img
+            src="IMG_20260907_233044_1.jpg"
+            alt="การอบรมความปลอดภัยในสถานศึกษา"
+        >
+
     </div>
+
 
     <div class="details">
 
@@ -380,8 +755,14 @@ body {
 <div class="activity-card">
 
     <div class="certificate">
-        <img src="IMG_20260907_235602.jpg" alt="อบรมแกนนำ อย น้อย">
+
+        <img
+            src="IMG_20260907_235602.jpg"
+            alt="อบรมแกนนำ อย น้อย"
+        >
+
     </div>
+
 
     <div class="details">
 
@@ -411,8 +792,14 @@ body {
 <div class="activity-card">
 
     <div class="certificate">
-        <img src="IMG_20260907_232729_1.jpg" alt="วัยรุ่นยุคใหม่ใส่ใจสุขภาพจิต">
+
+        <img
+            src="IMG_20260907_232729_1.jpg"
+            alt="วัยรุ่นยุคใหม่ใส่ใจสุขภาพจิต"
+        >
+
     </div>
+
 
     <div class="details">
 
@@ -437,21 +824,32 @@ body {
 </div>
 
 
-
-<!-- ================================================= -->
-<!-- กิจกรรมประเภทแข่งขัน -->
-<!-- ================================================= -->
+<!-- =================================================
+     กิจกรรมประเภทแข่งขัน
+================================================== -->
 
 <div class="category competition">
-    <h2>💜 กิจกรรมประเภทแข่งขัน</h2>
+
+    <h2>
+        💜 กิจกรรมประเภทแข่งขัน
+    </h2>
+
 </div>
 
+
+<!-- กิจกรรมแข่งขัน -->
 
 <div class="activity-card">
 
     <div class="certificate">
-        <img src="IMG_20260907_232832_1.jpg" alt="การแข่งขันประกวดคำขวัญต่อต้านการทุจริต">
+
+        <img
+            src="IMG_20260907_232832_1.jpg"
+            alt="การแข่งขันประกวดคำขวัญต่อต้านการทุจริต"
+        >
+
     </div>
+
 
     <div class="details">
 
@@ -480,12 +878,16 @@ body {
 </div>
 
 
-<!-- ================================================= -->
-<!-- กิจกรรมประเภทอาสา -->
-<!-- ================================================= -->
+<!-- =================================================
+     กิจกรรมประเภทอาสา
+================================================== -->
 
 <div class="category volunteer">
-    <h2>💚 กิจกรรมประเภทอาสา</h2>
+
+    <h2>
+        💚 กิจกรรมประเภทอาสา
+    </h2>
+
 </div>
 
 
@@ -493,13 +895,16 @@ body {
 
 <div class="activity-card">
 
-    <!-- รูปกิจกรรม -->
     <div class="certificate">
-        <img src="IMG_20260907_233107_1.jpg" alt="กิจกรรมจิตอาสา">
+
+        <img
+            src="IMG_20260907_233107_1.jpg"
+            alt="กิจกรรมจิตอาสา"
+        >
+
     </div>
 
 
-    <!-- รายละเอียดกิจกรรม -->
     <div class="details">
 
         <h3>
@@ -527,7 +932,9 @@ body {
 </div>
 
 
-<!-- ปุ่มกลับ Portfolio -->
+<!-- =================================================
+     ปุ่มกลับ Portfolio
+================================================== -->
 
 <div class="back">
 
@@ -540,5 +947,7 @@ body {
 
 </div>
 
+
 </body>
-  </html>
+
+    </html>
