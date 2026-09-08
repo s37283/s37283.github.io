@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>ความสามารถพิเศษ</title>
 
-  <!-- ดึงฟอนต์ Kanit จาก Google Fonts -->
+  <!-- Google Fonts : Kanit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  
+
   <style>
+
+    /* =========================
+       ตั้งค่าพื้นฐาน
+    ========================= */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -18,228 +24,442 @@
       font-family: 'Kanit', sans-serif;
     }
 
+
+    /* =========================
+       พื้นหลัง
+    ========================= */
+
     body {
       background-color: #fce4ec;
+
       display: flex;
       justify-content: center;
-      align-items: center;
+
       min-height: 100vh;
-      padding: 20px;
+
+      padding: 40px 20px;
     }
+
+
+    /* =========================
+       กล่องหลัก
+    ========================= */
 
     .container {
       width: 100%;
       max-width: 600px;
     }
 
-    /* === หัวข้อ === */
+
+    /* =========================
+       ส่วนหัวข้อ
+    ========================= */
+
     .header-card {
       background-color: #ffffff;
+
       border-radius: 20px;
+
       padding: 24px 28px;
+
       margin-bottom: 25px;
-      box-shadow: 0 4px 15px rgba(233, 30, 99, 0.08);
+
+      box-shadow:
+        0 4px 15px rgba(233, 30, 99, 0.08);
+
       display: flex;
       align-items: center;
+
       gap: 12px;
     }
 
+
+    /* ไอคอนหัวใจ */
+
     .heart-icon {
       font-size: 32px;
+
       line-height: 1;
+
       display: flex;
       align-items: center;
     }
+
+
+    /* ชื่อหัวข้อ */
 
     .title-text {
       color: #ff3377;
+
       font-size: 28px;
+
       font-weight: 800;
+
       letter-spacing: 0.5px;
     }
 
-    /* === การ์ดกราฟ === */
+
+    /* =========================
+       การ์ดกราฟ
+    ========================= */
+
     .chart-card {
       background-color: #ffffff;
+
       border-radius: 20px;
+
       padding: 30px 25px;
-      box-shadow: 0 4px 15px rgba(233, 30, 99, 0.08);
+
+      box-shadow:
+        0 4px 15px rgba(233, 30, 99, 0.08);
     }
+
+
+    /* กล่องรวมกราฟ */
 
     .chart-container {
       display: flex;
+
       flex-direction: column;
+
       gap: 16px;
     }
 
+
+    /* แต่ละแถว */
+
     .chart-row {
       display: flex;
+
       align-items: center;
     }
 
+
+    /* ชื่อความสามารถ */
+
     .label {
       width: 140px;
+
       text-align: right;
+
       padding-right: 15px;
+
       font-size: 15px;
+
       font-weight: 600;
+
       color: #555555;
     }
 
+
+    /* พื้นหลังของแท่งกราฟ */
+
     .bar-container {
       flex: 1;
+
       height: 36px;
+
       background-color: #f8bbd0;
+
       border-radius: 4px;
+
       display: flex;
+
       overflow: hidden;
     }
 
+
+    /* แท่งคะแนน */
+
     .bar-fill {
       height: 100%;
+
       background-color: #ff3377;
     }
 
-    /* สเกล 0 - 100 */
+
+    /* =========================
+       ตัวเลข 0 - 100
+    ========================= */
+
     .scale-container {
       display: flex;
+
       margin-left: 140px;
+
       margin-top: 6px;
+
       justify-content: space-between;
+
       color: #888888;
+
       font-size: 13px;
+
       font-weight: 600;
     }
 
-    /* === ปุ่มกลับหน้า Portfolio === */
+
+    /* =========================
+       ปุ่มกลับหน้า Portfolio
+    ========================= */
+
     .back {
       text-align: center;
-      margin-top: 30px;
-      margin-bottom: 10px;
+
+      margin: 50px 0 60px;
     }
+
 
     .back a {
       display: inline-block;
+
       background: #ff69a8;
+
       color: white;
+
       text-decoration: none;
+
       padding: 16px 55px;
+
       border-radius: 50px;
+
+      font-family: "Kanit", sans-serif;
+
       font-size: 22px;
+
       font-weight: 500;
-      box-shadow: 0 5px 15px rgba(255, 105, 168, 0.25);
+
+      box-shadow:
+        0 5px 15px rgba(255, 105, 168, 0.25);
+
       transition: 0.3s;
     }
 
+
+    /* เมื่อนำเมาส์ไปชี้ */
+
     .back a:hover {
       background: #ff4f98;
+
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(255, 105, 168, 0.35);
+
+      box-shadow:
+        0 8px 20px rgba(255, 105, 168, 0.35);
     }
 
-    /* === รองรับหน้าจอมือถือ === */
+
+    /* =========================
+       รองรับโทรศัพท์
+    ========================= */
+
     @media (max-width: 600px) {
 
       .header-card {
         padding: 20px;
       }
 
+
       .title-text {
         font-size: 24px;
       }
 
+
+      .heart-icon {
+        font-size: 28px;
+      }
+
+
       .label {
         width: 115px;
+
         font-size: 13px;
+
         padding-right: 10px;
       }
+
 
       .scale-container {
         margin-left: 115px;
       }
 
+
       .back a {
         font-size: 19px;
+
         padding: 14px 40px;
       }
+
     }
 
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- =========================
+       กล่องหลัก
+  ========================= -->
+
   <div class="container">
-    
-    <!-- หัวข้อ -->
+
+
+    <!-- =========================
+         หัวข้อ
+    ========================= -->
+
     <div class="header-card">
-      <span class="heart-icon">💖</span>
-      <h1 class="title-text">ความสามารถพิเศษ</h1>
+
+      <span class="heart-icon">
+        💖
+      </span>
+
+      <h1 class="title-text">
+        ความสามารถพิเศษ
+      </h1>
+
     </div>
 
-    <!-- ส่วนกราฟแสดงความสามารถ -->
+
+
+    <!-- =========================
+         การ์ดแสดงกราฟ
+    ========================= -->
+
     <div class="chart-card">
 
+
       <div class="chart-container">
-        
-        <!-- รายการที่ 1 -->
+
+
+        <!-- ความสามารถที่ 1 -->
+
         <div class="chart-row">
-          <div class="label">จิตอาสา</div>
+
+          <div class="label">
+            จิตอาสา
+          </div>
 
           <div class="bar-container">
-            <div class="bar-fill" style="width: 85%;"></div>
+
+            <div
+              class="bar-fill"
+              style="width: 85%;">
+            </div>
+
           </div>
+
         </div>
 
-        <!-- รายการที่ 2 -->
+
+
+        <!-- ความสามารถที่ 2 -->
+
         <div class="chart-row">
-          <div class="label">แก้ไขปัญหาเฉพาะหน้า</div>
+
+          <div class="label">
+            แก้ไขปัญหาเฉพาะหน้า
+          </div>
 
           <div class="bar-container">
-            <div class="bar-fill" style="width: 70%;"></div>
+
+            <div
+              class="bar-fill"
+              style="width: 70%;">
+            </div>
+
           </div>
+
         </div>
 
-        <!-- รายการที่ 3 -->
+
+
+        <!-- ความสามารถที่ 3 -->
+
         <div class="chart-row">
-          <div class="label">ทำงานร่วมกับผู้อื่น</div>
+
+          <div class="label">
+            ทำงานร่วมกับผู้อื่น
+          </div>
 
           <div class="bar-container">
-            <div class="bar-fill" style="width: 84%;"></div>
+
+            <div
+              class="bar-fill"
+              style="width: 84%;">
+            </div>
+
           </div>
+
         </div>
 
-        <!-- รายการที่ 4 -->
+
+
+        <!-- ความสามารถที่ 4 -->
+
         <div class="chart-row">
-          <div class="label">ความเป็นผู้นำ</div>
+
+          <div class="label">
+            ความเป็นผู้นำ
+          </div>
 
           <div class="bar-container">
-            <div class="bar-fill" style="width: 83%;"></div>
+
+            <div
+              class="bar-fill"
+              style="width: 83%;">
+            </div>
+
           </div>
+
         </div>
 
-        <!-- สเกลตัวเลข 0 - 100 -->
+
+
+        <!-- =========================
+             ตัวเลข 0 - 100
+        ========================= -->
+
         <div class="scale-container">
+
           <span>0</span>
+
           <span>20</span>
+
           <span>40</span>
+
           <span>60</span>
+
           <span>80</span>
+
           <span>100</span>
+
         </div>
+
 
       </div>
 
     </div>
 
-    <!-- ปุ่มกลับหน้า Portfolio -->
+
+
+    <!-- =========================
+         ปุ่มกลับหน้า Portfolio
+    ========================= -->
+
     <div class="back">
+
       <a href="portfolio.html">
         🌷 กลับหน้า Portfolio
       </a>
+
     </div>
 
+
   </div>
+
 
 </body>
 </html>
