@@ -12,18 +12,65 @@
 
     <style>
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: "Kanit", sans-serif;
             background: linear-gradient(135deg, #ffd6e7, #d9f3ff, #fff3b0);
             text-align: center;
-            padding: 30px;
+            padding: 0;
             margin: 0;
             color: #5c4b51;
         }
 
+        /* =========================
+           เมนูด้านบน
+        ========================= */
+
+        .navbar {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+
+            /* ทำให้เมนูอยู่ด้านบนตลอด */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #d94f82;
+            background: #fff0f6;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           เนื้อหาหลัก
+        ========================= */
+
         .container {
             max-width: 800px;
             margin: 0 auto;
+            padding: 30px 20px;
         }
 
         h1 {
@@ -103,85 +150,137 @@
             transform: scale(1.05);
         }
 
+        /* สำหรับหน้าจอมือถือ */
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 10px 5px;
+                gap: 5px;
+            }
+
+            .navbar a {
+                font-size: 13px;
+                padding: 7px 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .description {
+                font-size: 17px;
+            }
+
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-<div class="container">
+    <!-- =========================
+         เมนูด้านบนสุด
+    ========================= -->
 
-    <h1>🌸 แฟ้มสะสมงาน (Portfolio) 🌸</h1>
+    <nav class="navbar">
 
-    <p class="description">
-        นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจ
-    </p>
+        <a href="intro.html">📖 คำนำ</a>
 
-    <!-- รูปภาพ -->
-    <img src="IMG_20250831_160950.jpg"
-         alt="รูปภาพ Portfolio"
-         class="profile-image">
+        <a href="profile.html">👤 ประวัติส่วนตัว</a>
 
+        <a href="education.html">🎓 ประวัติการศึกษา</a>
 
-    <!-- กล่องที่ 1 -->
-    <a href="intro.html" class="card-link">
-        <div class="project-card">
-            <h3>📖 1. คำนำ</h3>
-            <p>แนะนำและกล่าวถึงความตั้งใจในการจัดทำแฟ้มสะสมงาน</p>
-        </div>
-    </a>
+        <a href="interest.html">🔬 ความสนใจในการศึกษาต่อ</a>
+
+        <a href="activity.html">🏆 กิจกรรมที่เข้าร่วม</a>
+
+        <a href="talent.html">⭐ ความสามารถพิเศษ</a>
+
+    </nav>
 
 
-    <!-- กล่องที่ 2 -->
-    <a href="profile.html" class="card-link">
-        <div class="project-card">
-            <h3>👤 2. ประวัติส่วนตัว</h3>
-            <p>ข้อมูลและรายละเอียดเกี่ยวกับตัวฉัน</p>
-        </div>
-    </a>
+    <!-- =========================
+         เนื้อหาหลัก
+    ========================= -->
+
+    <div class="container">
+
+        <h1>🌸 แฟ้มสะสมงาน (Portfolio) 🌸</h1>
+
+        <p class="description">
+            นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจ
+        </p>
+
+        <!-- รูปภาพ -->
+        <img src="IMG_20250831_160950.jpg"
+             alt="รูปภาพ Portfolio"
+             class="profile-image">
 
 
-    <!-- กล่องที่ 3 -->
-    <a href="education.html" class="card-link">
-        <div class="project-card">
-            <h3>🎓 3. ประวัติการศึกษา</h3>
-            <p>ประวัติการศึกษา โรงเรียน และระดับชั้นที่ศึกษา</p>
-        </div>
-    </a>
+        <!-- กล่องที่ 1 -->
+        <a href="intro.html" class="card-link">
+            <div class="project-card">
+                <h3>📖 1. คำนำ</h3>
+                <p>แนะนำและกล่าวถึงความตั้งใจในการจัดทำแฟ้มสะสมงาน</p>
+            </div>
+        </a>
 
 
-    <!-- กล่องที่ 4 -->
-    <a href="interest.html" class="card-link">
-        <div class="project-card">
-            <h3>🔬 4. ความสนใจในการศึกษาต่อ</h3>
-            <p>สาขาวิชาและแนวทางการศึกษาต่อที่สนใจ</p>
-        </div>
-    </a>
+        <!-- กล่องที่ 2 -->
+        <a href="profile.html" class="card-link">
+            <div class="project-card">
+                <h3>👤 2. ประวัติส่วนตัว</h3>
+                <p>ข้อมูลและรายละเอียดเกี่ยวกับตัวฉัน</p>
+            </div>
+        </a>
 
 
-    <!-- กล่องที่ 5 -->
-    <a href="activity.html" class="card-link">
-        <div class="project-card">
-            <h3>🏆 5. กิจกรรมที่เข้าร่วม</h3>
-            <p>กิจกรรม การแข่งขัน และประสบการณ์ต่าง ๆ</p>
-        </div>
-    </a>
+        <!-- กล่องที่ 3 -->
+        <a href="education.html" class="card-link">
+            <div class="project-card">
+                <h3>🎓 3. ประวัติการศึกษา</h3>
+                <p>ประวัติการศึกษา โรงเรียน และระดับชั้นที่ศึกษา</p>
+            </div>
+        </a>
 
 
-    <!-- กล่องที่ 6 -->
-    <a href="talent.html" class="card-link">
-        <div class="project-card">
-            <h3>⭐ 6. ความสามารถพิเศษ</h3>
-            <p>ความสามารถและทักษะที่มีความถนัด</p>
-        </div>
-    </a>
+        <!-- กล่องที่ 4 -->
+        <a href="interest.html" class="card-link">
+            <div class="project-card">
+                <h3>🔬 4. ความสนใจในการศึกษาต่อ</h3>
+                <p>สาขาวิชาและแนวทางการศึกษาต่อที่สนใจ</p>
+            </div>
+        </a>
 
 
-    <!-- ปุ่มกลับหน้าแรก -->
-    <a href="index.html" class="btn">
-        🏠 กลับหน้าแรก
-    </a>
+        <!-- กล่องที่ 5 -->
+        <a href="activity.html" class="card-link">
+            <div class="project-card">
+                <h3>🏆 5. กิจกรรมที่เข้าร่วม</h3>
+                <p>กิจกรรม การแข่งขัน และประสบการณ์ต่าง ๆ</p>
+            </div>
+        </a>
 
-</div>
+
+        <!-- กล่องที่ 6 -->
+        <a href="talent.html" class="card-link">
+            <div class="project-card">
+                <h3>⭐ 6. ความสามารถพิเศษ</h3>
+                <p>ความสามารถและทักษะที่มีความถนัด</p>
+            </div>
+        </a>
+
+
+        <!-- ปุ่มกลับหน้าแรก -->
+        <a href="index.html" class="btn">
+            🏠 กลับหน้าแรก
+        </a>
+
+    </div>
 
 </body>
 </html>
