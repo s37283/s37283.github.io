@@ -12,101 +12,329 @@
 
     <style>
 
+        /* =========================
+           ตั้งค่าพื้นฐาน
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
             font-family: "Kanit", sans-serif;
             background: linear-gradient(135deg, #ffd6e7, #d9f3ff, #fff3b0);
             color: #5c4b51;
+            min-height: 100vh;
         }
+
+
+        /* =========================
+           เมนูด้านบน
+        ========================= */
+
+        .navbar {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 10px;
+
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #d94f82;
+            background: #fff0f6;
+
+            padding: 8px 14px;
+            border-radius: 20px;
+
+            font-size: 15px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           เนื้อหา
+        ========================= */
 
         .container {
             max-width: 800px;
             margin: auto;
+            padding: 40px 20px;
         }
+
+
+        /* =========================
+           กล่องคำนำ
+        ========================= */
 
         .card {
             background: rgba(255, 255, 255, 0.95);
+
             padding: 45px;
+
             border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(214, 100, 150, 0.2);
+
+            box-shadow:
+                0 10px 30px rgba(214, 100, 150, 0.2);
+
+            border: 3px solid white;
         }
+
+
+        /* =========================
+           หัวข้อ
+        ========================= */
 
         h1 {
             text-align: center;
             color: #e85d8f;
+
             font-size: 36px;
+
+            margin-top: 0;
             margin-bottom: 30px;
         }
+
+
+        /* =========================
+           เนื้อหา
+        ========================= */
 
         p {
             font-size: 19px;
             line-height: 2;
+
             text-align: justify;
+
             margin-bottom: 25px;
         }
 
+
+        /* =========================
+           ชื่อผู้จัดทำ
+        ========================= */
+
         .name {
             text-align: right;
+
             margin-top: 40px;
+
             font-size: 20px;
             font-weight: 500;
+
+            color: #6d5962;
         }
+
+        .name strong {
+            color: #d94f82;
+            font-size: 22px;
+        }
+
+
+        /* =========================
+           ปุ่มกลับ Portfolio
+        ========================= */
 
         .btn {
             display: block;
+
             width: fit-content;
+
             margin: 30px auto 0;
+
             padding: 12px 25px;
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+
+            background: linear-gradient(
+                135deg,
+                #ff7eb3,
+                #ff758c
+            );
+
             color: white;
+
             text-decoration: none;
+
             border-radius: 30px;
+
             font-size: 18px;
+            font-weight: 500;
+
             transition: 0.3s;
+
+            box-shadow: 0 5px 15px rgba(255, 117, 140, 0.25);
         }
 
         .btn:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 117, 140, 0.35);
+        }
+
+
+        /* =========================
+           สำหรับมือถือ
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 10px 5px;
+                gap: 5px;
+            }
+
+            .navbar a {
+                font-size: 13px;
+                padding: 7px 10px;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            .card {
+                padding: 25px 20px;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+
+            .name {
+                font-size: 17px;
+            }
+
+            .name strong {
+                font-size: 19px;
+            }
+
+            .btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
         }
 
     </style>
 </head>
 
+
 <body>
 
-<div class="container">
 
-    <div class="card">
+    <!-- =========================
+         เมนูด้านบนทุกหน้า
+    ========================= -->
 
-        <h1>🌸 คำนำ 🌸</h1>
+    <nav class="navbar">
 
-        <p>
-            แฟ้มสะสมผลงานเล่มนี้ จัดทำขึ้นเพื่อนำเสนอเอกสารข้อมูลเกี่ยวกับ
-            ประวัติส่วนตัว ประวัติการศึกษา ความรู้ ความสามารถ ทักษะ และความสนใจ
-            ตลอดจนผลงานและกิจกรรมที่ข้าพเจ้าได้เข้าร่วม ซึ่งแสดงถึงพัฒนาการและ
-            การเรียนรู้ที่ผ่านมา
-        </p>
-
-        <p>
-            ข้าพเจ้าหวังเป็นอย่างยิ่งว่า แฟ้มสะสมผลงานเล่มนี้จะทำให้ท่านกรรมการ
-            ได้เห็นถึงตัวตน ความตั้งใจจริง และศักยภาพของข้าพเจ้า
-            ขอขอบพระคุณอาจารย์ ผู้ปกครอง และผู้ที่มีส่วนเกี่ยวข้องทุกท่าน
-            ที่ให้คำแนะนำและสนับสนุนข้าพเจ้าด้วยดีเสมอมา
-        </p>
-
-        <div class="name">
-            จัดทำโดย<br>
-            <strong>ชนภัทร ศิวิไล</strong>
-        </div>
-
-        <a href="portfolio.html" class="btn">
-            🌷 กลับหน้า Portfolio
+        <a href="portfolio.html">
+            🏠 หน้าแรก
         </a>
+
+        <a href="intro.html">
+            📖 คำนำ
+        </a>
+
+        <a href="profile.html">
+            👤 ประวัติส่วนตัว
+        </a>
+
+        <a href="education.html">
+            🎓 ประวัติการศึกษา
+        </a>
+
+        <a href="interest.html">
+            🔬 ความสนใจในการศึกษาต่อ
+        </a>
+
+        <a href="activity.html">
+            🏆 กิจกรรมที่เข้าร่วม
+        </a>
+
+        <a href="talent.html">
+            ⭐ ความสามารถพิเศษ
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         เนื้อหาคำนำ
+    ========================= -->
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>
+                🌸 คำนำ 🌸
+            </h1>
+
+
+            <p>
+                แฟ้มสะสมผลงานเล่มนี้ จัดทำขึ้นเพื่อนำเสนอเอกสารข้อมูลเกี่ยวกับ
+                ประวัติส่วนตัว ประวัติการศึกษา ความรู้ ความสามารถ ทักษะ และความสนใจ
+                ตลอดจนผลงานและกิจกรรมที่ข้าพเจ้าได้เข้าร่วม ซึ่งแสดงถึงพัฒนาการและ
+                การเรียนรู้ที่ผ่านมา
+            </p>
+
+
+            <p>
+                ข้าพเจ้าหวังเป็นอย่างยิ่งว่า แฟ้มสะสมผลงานเล่มนี้จะทำให้ท่านกรรมการ
+                ได้เห็นถึงตัวตน ความตั้งใจจริง และศักยภาพของข้าพเจ้า
+                ขอขอบพระคุณอาจารย์ ผู้ปกครอง และผู้ที่มีส่วนเกี่ยวข้องทุกท่าน
+                ที่ให้คำแนะนำและสนับสนุนข้าพเจ้าด้วยดีเสมอมา
+            </p>
+
+
+            <!-- ชื่อผู้จัดทำ -->
+
+            <div class="name">
+
+                จัดทำโดย<br>
+
+                <strong>
+                    ชนภัทร ศิวิไล
+                </strong>
+
+            </div>
+
+
+            <!-- ปุ่มกลับ -->
+
+            <a href="portfolio.html" class="btn">
+                🌷 กลับหน้า Portfolio
+            </a>
+
+        </div>
 
     </div>
 
-</div>
 
 </body>
 </html>
