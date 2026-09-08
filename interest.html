@@ -2,21 +2,26 @@
 <html lang="th">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ความสนใจในการศึกษาต่อ</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>ความสนใจในการศึกษาต่อ | Portfolio</title>
 
 <!-- Google Font : Kanit -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
 
 <style>
-
-/* =========================
-   ตั้งค่าพื้นฐาน
-========================= */
 
 * {
     box-sizing: border-box;
@@ -24,16 +29,94 @@
 
 body {
     margin: 0;
+    padding: 0;
+
     font-family: "Kanit", sans-serif;
 
-    background: linear-gradient(
-        135deg,
-        #fff0f6,
-        #eef7ff
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #d9f3ff,
+            #fff3b0
+        );
 
     color: #333;
+
     min-height: 100vh;
+}
+
+
+/* =========================
+   เมนูด้านบน
+========================= */
+
+.navbar {
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 15px 10px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.12);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.navbar a {
+
+    text-decoration: none;
+
+    color: #d94f82;
+
+    background: #fff0f6;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.navbar a:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7eb3,
+            #ff758c
+        );
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px
+        rgba(255, 117, 140, 0.25);
 }
 
 
@@ -42,20 +125,31 @@ body {
 ========================= */
 
 .header {
+
     text-align: center;
+
     padding: 55px 20px 30px;
 }
 
+
 .header h1 {
+
     margin: 0;
+
     font-size: 42px;
+
     font-weight: 600;
+
     color: #d63384;
 }
 
+
 .header p {
+
     margin-top: 8px;
+
     font-size: 20px;
+
     color: #777;
 }
 
@@ -65,8 +159,11 @@ body {
 ========================= */
 
 .content {
+
     width: 90%;
+
     max-width: 1000px;
+
     margin: 20px auto 60px;
 }
 
@@ -76,7 +173,9 @@ body {
 ========================= */
 
 .card {
-    background: rgba(255, 255, 255, 0.95);
+
+    background:
+        rgba(255, 255, 255, 0.95);
 
     border-radius: 25px;
 
@@ -85,18 +184,22 @@ body {
     margin-bottom: 25px;
 
     box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.08);
+        0 8px 25px
+        rgba(0, 0, 0, 0.08);
 
     border-left: 7px solid #d63384;
 
     transition: 0.3s;
 }
 
+
 .card:hover {
+
     transform: translateY(-4px);
 
     box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.12);
+        0 12px 30px
+        rgba(0, 0, 0, 0.12);
 }
 
 
@@ -105,6 +208,7 @@ body {
 ========================= */
 
 .card h2 {
+
     margin-top: 0;
 
     color: #d63384;
@@ -120,6 +224,7 @@ body {
 ========================= */
 
 .card p {
+
     font-size: 20px;
 
     line-height: 1.9;
@@ -135,6 +240,7 @@ body {
 ========================= */
 
 .highlight {
+
     background:
         linear-gradient(
             135deg,
@@ -147,11 +253,15 @@ body {
     text-align: center;
 }
 
+
 .highlight h2 {
+
     font-size: 32px;
 }
 
+
 .highlight .medical {
+
     font-size: 36px;
 
     font-weight: 600;
@@ -162,18 +272,18 @@ body {
 }
 
 
-/* ==================================================
-   ส่วนคณะ สาขา และมหาวิทยาลัย
-================================================== */
+/* =========================
+   ส่วนมหาวิทยาลัย
+========================= */
 
 .university-section {
+
     margin-top: 55px;
 }
 
 
-/* หัวข้อ */
-
 .university-title {
+
     text-align: center;
 
     font-size: 32px;
@@ -188,9 +298,8 @@ body {
 }
 
 
-/* กล่องรวมมหาวิทยาลัย */
-
 .university-container {
+
     display: grid;
 
     grid-template-columns:
@@ -205,6 +314,7 @@ body {
 ========================= */
 
 .university-card {
+
     background: white;
 
     border-radius: 25px;
@@ -214,7 +324,8 @@ body {
     text-align: center;
 
     box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.08);
+        0 8px 25px
+        rgba(0, 0, 0, 0.08);
 
     transition: 0.3s;
 
@@ -225,11 +336,14 @@ body {
     align-items: center;
 }
 
+
 .university-card:hover {
+
     transform: translateY(-7px);
 
     box-shadow:
-        0 14px 30px rgba(0, 0, 0, 0.13);
+        0 14px 30px
+        rgba(0, 0, 0, 0.13);
 }
 
 
@@ -238,6 +352,7 @@ body {
 ========================= */
 
 .university-card img {
+
     width: 100%;
 
     max-width: 230px;
@@ -257,6 +372,7 @@ body {
 ========================= */
 
 .university-card h3 {
+
     color: #d63384;
 
     font-size: 22px;
@@ -274,6 +390,7 @@ body {
 ========================= */
 
 .university-card p {
+
     color: #555;
 
     font-size: 19px;
@@ -284,16 +401,20 @@ body {
 }
 
 
-/* ==================================================
-   ปุ่มกลับหน้า Portfolio
-================================================== */
+/* =========================
+   ปุ่มกลับ Portfolio
+========================= */
 
 .back {
+
     text-align: center;
+
     margin: 50px 0 60px;
 }
 
+
 .back a {
+
     display: inline-block;
 
     background: #ff69a8;
@@ -313,28 +434,33 @@ body {
     font-weight: 500;
 
     box-shadow:
-        0 5px 15px rgba(255, 105, 168, 0.25);
+        0 5px 15px
+        rgba(255, 105, 168, 0.25);
 
     transition: 0.3s;
 }
 
+
 .back a:hover {
+
     background: #ff4f98;
 
     transform: translateY(-3px);
 
     box-shadow:
-        0 8px 20px rgba(255, 105, 168, 0.35);
+        0 8px 20px
+        rgba(255, 105, 168, 0.35);
 }
 
 
-/* ==================================================
-   หน้าจอแท็บเล็ต
-================================================== */
+/* =========================
+   แท็บเล็ต
+========================= */
 
 @media (max-width: 900px) {
 
     .university-container {
+
         grid-template-columns:
             repeat(2, 1fr);
     }
@@ -342,79 +468,132 @@ body {
 }
 
 
-/* ==================================================
-   หน้าจอโทรศัพท์
-================================================== */
+/* =========================
+   โทรศัพท์
+========================= */
 
 @media (max-width: 700px) {
 
+    .navbar {
+
+        padding: 10px 5px;
+
+        gap: 5px;
+    }
+
+
+    .navbar a {
+
+        font-size: 13px;
+
+        padding: 7px 10px;
+    }
+
+
     .header {
+
         padding-top: 35px;
     }
 
+
     .header h1 {
+
         font-size: 31px;
     }
 
+
     .header p {
+
         font-size: 17px;
     }
 
+
     .content {
+
         width: 94%;
     }
 
+
     .card {
+
         padding: 25px 22px;
+
         border-left-width: 5px;
     }
 
+
     .card h2 {
+
         font-size: 24px;
     }
 
+
     .card p {
+
         font-size: 17px;
+
         line-height: 1.8;
+
         text-align: left;
     }
 
+
     .highlight .medical {
+
         font-size: 29px;
     }
 
+
     .university-container {
+
         grid-template-columns: 1fr;
+
         gap: 20px;
     }
 
+
     .university-title {
+
         font-size: 27px;
+
         line-height: 1.5;
     }
 
+
     .university-card img {
+
         width: 100%;
+
         max-width: 200px;
+
         height: 190px;
+
         object-fit: contain;
     }
 
+
     .university-card h3 {
+
         font-size: 21px;
     }
 
+
     .university-card p {
+
         font-size: 18px;
     }
 
-    /* ปุ่มมือถือ */
+
     .back {
+
         margin: 40px 0 50px;
     }
 
+
     .back a {
+
         padding: 14px 40px;
+
         font-size: 20px;
     }
 
@@ -426,6 +605,43 @@ body {
 
 
 <body>
+
+
+<!-- ==================================================
+     เมนูด้านบน
+================================================== -->
+
+<nav class="navbar">
+
+    <a href="portfolio.html">
+        🏠 หน้าแรก
+    </a>
+
+    <a href="intro.html">
+        📖 คำนำ
+    </a>
+
+    <a href="profile.html">
+        👤 ประวัติส่วนตัว
+    </a>
+
+    <a href="education.html">
+        🎓 ประวัติการศึกษา
+    </a>
+
+    <a href="interest.html">
+        🔬 ความสนใจในการศึกษาต่อ
+    </a>
+
+    <a href="activity.html">
+        🏆 กิจกรรมที่เข้าร่วม
+    </a>
+
+    <a href="talent.html">
+        ⭐ ความสามารถพิเศษ
+    </a>
+
+</nav>
 
 
 <!-- ==================================================
@@ -558,13 +774,15 @@ body {
 
 
 <!-- ==================================================
-     คณะ สาขา และมหาวิทยาลัยที่สนใจศึกษาต่อ
+     คณะ สาขา และมหาวิทยาลัย
 ================================================== -->
 
 <div class="university-section">
 
     <div class="university-title">
+
         คณะ สาขา และมหาวิทยาลัยที่สนใจศึกษาต่อ
+
     </div>
 
 
@@ -636,19 +854,22 @@ body {
 </div>
 
 
+<!-- ==================================================
+     ปุ่มกลับหน้า Portfolio
+================================================== -->
+
+<div class="back">
+
+    <a href="portfolio.html">
+        🌷 กลับหน้า Portfolio
+    </a>
+
 </div>
 
-<!-- =========================
-         ปุ่มกลับหน้า Portfolio
-         ========================= -->
-    <div class="back">
-        <a href="portfolio.html">
-            🌷 กลับหน้า Portfolio
-        </a>
-    </div>
 
 </div>
+
 
 </body>
-</html>
 
+</html>
