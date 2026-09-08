@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ความสามารถพิเศษ</title>
+  <title>ความสามารถพิเศษ | Portfolio</title>
 
   <!-- Google Fonts : Kanit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
 
@@ -24,20 +24,76 @@
       font-family: 'Kanit', sans-serif;
     }
 
+    body {
+      min-height: 100vh;
+
+      background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #d9f3ff,
+        #fff3b0
+      );
+
+      padding-bottom: 30px;
+    }
+
 
     /* =========================
-       พื้นหลัง
+       เมนูด้านบน
     ========================= */
 
-    body {
-      background-color: #fce4ec;
+    .navbar {
+      width: 100%;
+
+      background: rgba(255, 255, 255, 0.96);
+
+      padding: 15px 10px;
+
+      box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.12);
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
       display: flex;
       justify-content: center;
+      align-items: center;
 
-      min-height: 100vh;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-      padding: 40px 20px;
+    .navbar a {
+      text-decoration: none;
+
+      color: #d94f82;
+
+      background: #fff0f6;
+
+      padding: 8px 14px;
+
+      border-radius: 20px;
+
+      font-size: 15px;
+      font-weight: 500;
+
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      background: linear-gradient(
+        135deg,
+        #ff7eb3,
+        #ff758c
+      );
+
+      color: white;
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 4px 10px rgba(255, 117, 140, 0.25);
     }
 
 
@@ -47,16 +103,21 @@
 
     .container {
       width: 100%;
-      max-width: 600px;
+
+      max-width: 800px;
+
+      margin: 40px auto 0;
+
+      padding: 0 20px;
     }
 
 
     /* =========================
-       ส่วนหัวข้อ
+       หัวข้อ
     ========================= */
 
     .header-card {
-      background-color: #ffffff;
+      background: rgba(255, 255, 255, 0.95);
 
       border-radius: 20px;
 
@@ -65,33 +126,27 @@
       margin-bottom: 25px;
 
       box-shadow:
-        0 4px 15px rgba(233, 30, 99, 0.08);
+        0 4px 15px rgba(233, 30, 99, 0.12);
 
       display: flex;
+
       align-items: center;
+
+      justify-content: center;
 
       gap: 12px;
     }
-
-
-    /* ไอคอนหัวใจ */
 
     .heart-icon {
       font-size: 32px;
 
       line-height: 1;
-
-      display: flex;
-      align-items: center;
     }
-
-
-    /* ชื่อหัวข้อ */
 
     .title-text {
       color: #ff3377;
 
-      font-size: 28px;
+      font-size: 30px;
 
       font-weight: 800;
 
@@ -104,29 +159,28 @@
     ========================= */
 
     .chart-card {
-      background-color: #ffffff;
+      background: rgba(255, 255, 255, 0.95);
 
       border-radius: 20px;
 
-      padding: 30px 25px;
+      padding: 35px 30px;
 
       box-shadow:
-        0 4px 15px rgba(233, 30, 99, 0.08);
+        0 4px 15px rgba(233, 30, 99, 0.12);
     }
-
-
-    /* กล่องรวมกราฟ */
 
     .chart-container {
       display: flex;
 
       flex-direction: column;
 
-      gap: 16px;
+      gap: 18px;
     }
 
 
-    /* แต่ละแถว */
+    /* =========================
+       แต่ละแถว
+    ========================= */
 
     .chart-row {
       display: flex;
@@ -138,7 +192,7 @@
     /* ชื่อความสามารถ */
 
     .label {
-      width: 140px;
+      width: 170px;
 
       text-align: right;
 
@@ -149,10 +203,14 @@
       font-weight: 600;
 
       color: #555555;
+
+      flex-shrink: 0;
     }
 
 
-    /* พื้นหลังของแท่งกราฟ */
+    /* =========================
+       พื้นหลังแท่งกราฟ
+    ========================= */
 
     .bar-container {
       flex: 1;
@@ -161,7 +219,7 @@
 
       background-color: #f8bbd0;
 
-      border-radius: 4px;
+      border-radius: 6px;
 
       display: flex;
 
@@ -174,7 +232,15 @@
     .bar-fill {
       height: 100%;
 
-      background-color: #ff3377;
+      background: linear-gradient(
+        90deg,
+        #ff69a8,
+        #ff3377
+      );
+
+      border-radius: 6px 0 0 6px;
+
+      transition: width 0.8s ease;
     }
 
 
@@ -185,9 +251,9 @@
     .scale-container {
       display: flex;
 
-      margin-left: 140px;
+      margin-left: 170px;
 
-      margin-top: 6px;
+      margin-top: 5px;
 
       justify-content: space-between;
 
@@ -200,15 +266,14 @@
 
 
     /* =========================
-       ปุ่มกลับหน้า Portfolio
+       ปุ่มกลับ Portfolio
     ========================= */
 
     .back {
       text-align: center;
 
-      margin: 50px 0 60px;
+      margin: 45px 0 30px;
     }
-
 
     .back a {
       display: inline-block;
@@ -219,13 +284,11 @@
 
       text-decoration: none;
 
-      padding: 16px 55px;
+      padding: 14px 45px;
 
       border-radius: 50px;
 
-      font-family: "Kanit", sans-serif;
-
-      font-size: 22px;
+      font-size: 20px;
 
       font-weight: 500;
 
@@ -234,9 +297,6 @@
 
       transition: 0.3s;
     }
-
-
-    /* เมื่อนำเมาส์ไปชี้ */
 
     .back a:hover {
       background: #ff4f98;
@@ -249,54 +309,136 @@
 
 
     /* =========================
-       รองรับโทรศัพท์
+       โทรศัพท์
     ========================= */
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
 
-      .header-card {
-        padding: 20px;
+      .navbar {
+        padding: 10px 5px;
+
+        gap: 5px;
       }
 
+      .navbar a {
+        font-size: 13px;
+
+        padding: 7px 10px;
+      }
+
+      .container {
+        margin-top: 25px;
+
+        padding: 0 12px;
+      }
+
+      .header-card {
+        padding: 20px 15px;
+      }
 
       .title-text {
         font-size: 24px;
       }
 
-
       .heart-icon {
         font-size: 28px;
       }
 
+      .chart-card {
+        padding: 25px 15px;
+      }
 
       .label {
-        width: 115px;
+        width: 125px;
 
         font-size: 13px;
 
         padding-right: 10px;
       }
 
-
       .scale-container {
-        margin-left: 115px;
+        margin-left: 125px;
+
+        font-size: 12px;
       }
 
+      .bar-container {
+        height: 32px;
+      }
 
       .back a {
-        font-size: 19px;
+        font-size: 18px;
 
-        padding: 14px 40px;
+        padding: 13px 35px;
+      }
+    }
+
+
+    /* =========================
+       โทรศัพท์จอเล็กมาก
+    ========================= */
+
+    @media (max-width: 420px) {
+
+      .label {
+        width: 105px;
+
+        font-size: 12px;
+      }
+
+      .scale-container {
+        margin-left: 105px;
+      }
+
+      .bar-container {
+        height: 28px;
       }
 
     }
 
   </style>
-
 </head>
 
 
 <body>
+
+
+  <!-- =========================
+       เมนูด้านบน
+  ========================= -->
+
+  <nav class="navbar">
+
+    <a href="portfolio.html">
+      🏠 หน้าแรก
+    </a>
+
+    <a href="intro.html">
+      📖 คำนำ
+    </a>
+
+    <a href="profile.html">
+      👤 ประวัติส่วนตัว
+    </a>
+
+    <a href="education.html">
+      🎓 ประวัติการศึกษา
+    </a>
+
+    <a href="interest.html">
+      🔬 ความสนใจในการศึกษาต่อ
+    </a>
+
+    <a href="activity.html">
+      🏆 กิจกรรมที่เข้าร่วม
+    </a>
+
+    <a href="talent.html">
+      ⭐ ความสามารถพิเศษ
+    </a>
+
+  </nav>
+
 
 
   <!-- =========================
@@ -325,11 +467,10 @@
 
 
     <!-- =========================
-         การ์ดแสดงกราฟ
+         การ์ดกราฟ
     ========================= -->
 
     <div class="chart-card">
-
 
       <div class="chart-container">
 
