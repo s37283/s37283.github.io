@@ -13,10 +13,6 @@
 
   <style>
 
-    /* =========================
-       ตั้งค่าพื้นฐาน
-    ========================= */
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -49,18 +45,22 @@
 
       padding: 15px 10px;
 
-      box-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
 
       display: flex;
+
       justify-content: center;
+
       align-items: center;
 
       flex-wrap: wrap;
+
       gap: 8px;
     }
 
@@ -76,6 +76,7 @@
       border-radius: 20px;
 
       font-size: 15px;
+
       font-weight: 500;
 
       transition: 0.3s;
@@ -92,8 +93,7 @@
 
       transform: translateY(-2px);
 
-      box-shadow:
-        0 4px 10px rgba(255, 117, 140, 0.25);
+      box-shadow: 0 4px 10px rgba(255, 117, 140, 0.25);
     }
 
 
@@ -104,7 +104,7 @@
     .container {
       width: 100%;
 
-      max-width: 800px;
+      max-width: 850px;
 
       margin: 40px auto 0;
 
@@ -125,8 +125,7 @@
 
       margin-bottom: 25px;
 
-      box-shadow:
-        0 4px 15px rgba(233, 30, 99, 0.12);
+      box-shadow: 0 4px 15px rgba(233, 30, 99, 0.12);
 
       display: flex;
 
@@ -149,8 +148,6 @@
       font-size: 30px;
 
       font-weight: 800;
-
-      letter-spacing: 0.5px;
     }
 
 
@@ -165,8 +162,7 @@
 
       padding: 35px 30px;
 
-      box-shadow:
-        0 4px 15px rgba(233, 30, 99, 0.12);
+      box-shadow: 0 4px 15px rgba(233, 30, 99, 0.12);
     }
 
     .chart-container {
@@ -177,19 +173,11 @@
       gap: 18px;
     }
 
-
-    /* =========================
-       แต่ละแถว
-    ========================= */
-
     .chart-row {
       display: flex;
 
       align-items: center;
     }
-
-
-    /* ชื่อความสามารถ */
 
     .label {
       width: 170px;
@@ -202,15 +190,10 @@
 
       font-weight: 600;
 
-      color: #555555;
+      color: #555;
 
       flex-shrink: 0;
     }
-
-
-    /* =========================
-       พื้นหลังแท่งกราฟ
-    ========================= */
 
     .bar-container {
       flex: 1;
@@ -226,9 +209,6 @@
       overflow: hidden;
     }
 
-
-    /* แท่งคะแนน */
-
     .bar-fill {
       height: 100%;
 
@@ -239,14 +219,7 @@
       );
 
       border-radius: 6px 0 0 6px;
-
-      transition: width 0.8s ease;
     }
-
-
-    /* =========================
-       ตัวเลข 0 - 100
-    ========================= */
 
     .scale-container {
       display: flex;
@@ -257,7 +230,7 @@
 
       justify-content: space-between;
 
-      color: #888888;
+      color: #888;
 
       font-size: 13px;
 
@@ -266,7 +239,157 @@
 
 
     /* =========================
-       ปุ่มกลับ Portfolio
+       ส่วนกิจกรรม
+    ========================= */
+
+    .evidence-section {
+      margin-top: 35px;
+    }
+
+    .evidence-title {
+      text-align: center;
+
+      color: #ff3377;
+
+      font-size: 28px;
+
+      font-weight: 700;
+
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       หัวข้อทักษะ
+    ========================= */
+
+    .skill-section {
+      margin-bottom: 35px;
+    }
+
+    .skill-heading {
+      background: rgba(255, 255, 255, 0.95);
+
+      padding: 15px 20px;
+
+      border-radius: 15px;
+
+      color: #d94f82;
+
+      font-size: 23px;
+
+      font-weight: 700;
+
+      margin-bottom: 15px;
+
+      box-shadow: 0 3px 12px rgba(233, 30, 99, 0.10);
+    }
+
+
+    /* =========================
+       การ์ดกิจกรรม
+    ========================= */
+
+    .activity-card {
+      background: rgba(255, 255, 255, 0.96);
+
+      border-radius: 20px;
+
+      padding: 25px;
+
+      margin-bottom: 20px;
+
+      box-shadow: 0 4px 15px rgba(233, 30, 99, 0.12);
+
+      border-left: 6px solid #ff69a8;
+    }
+
+    .activity-card h3 {
+      color: #ff3377;
+
+      font-size: 20px;
+
+      margin-bottom: 15px;
+
+      font-weight: 700;
+    }
+
+    .activity-content {
+      display: flex;
+
+      gap: 20px;
+
+      align-items: flex-start;
+    }
+
+
+    /* =========================
+       รูปกิจกรรม
+    ========================= */
+
+    .activity-image {
+      width: 240px;
+
+      height: 170px;
+
+      object-fit: cover;
+
+      border-radius: 14px;
+
+      border: 3px solid #ffd1e3;
+
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+
+      flex-shrink: 0;
+    }
+
+
+    /* =========================
+       รายละเอียด
+    ========================= */
+
+    .activity-text {
+      flex: 1;
+    }
+
+    .activity-text p {
+      color: #555;
+
+      font-size: 15px;
+
+      line-height: 1.8;
+
+      margin-bottom: 8px;
+    }
+
+    .topic {
+      color: #ff3377;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       กล่องหลักฐาน
+    ========================= */
+
+    .proof {
+      margin-top: 12px;
+
+      padding: 10px 14px;
+
+      background: #fff0f6;
+
+      border-radius: 12px;
+
+      color: #777;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       ปุ่มกลับ
     ========================= */
 
     .back {
@@ -292,8 +415,7 @@
 
       font-weight: 500;
 
-      box-shadow:
-        0 5px 15px rgba(255, 105, 168, 0.25);
+      box-shadow: 0 5px 15px rgba(255, 105, 168, 0.25);
 
       transition: 0.3s;
     }
@@ -303,8 +425,7 @@
 
       transform: translateY(-3px);
 
-      box-shadow:
-        0 8px 20px rgba(255, 105, 168, 0.35);
+      box-shadow: 0 8px 20px rgba(255, 105, 168, 0.35);
     }
 
 
@@ -330,10 +451,6 @@
         margin-top: 25px;
 
         padding: 0 12px;
-      }
-
-      .header-card {
-        padding: 20px 15px;
       }
 
       .title-text {
@@ -366,16 +483,49 @@
         height: 32px;
       }
 
+      .evidence-title {
+        font-size: 23px;
+      }
+
+      .skill-heading {
+        font-size: 20px;
+      }
+
+      .activity-card {
+        padding: 20px;
+      }
+
+      .activity-content {
+        flex-direction: column;
+      }
+
+      .activity-image {
+        width: 100%;
+
+        height: auto;
+
+        max-height: 350px;
+
+        object-fit: contain;
+      }
+
+      .activity-text p {
+        font-size: 14px;
+
+        line-height: 1.7;
+      }
+
       .back a {
         font-size: 18px;
 
         padding: 13px 35px;
       }
+
     }
 
 
     /* =========================
-       โทรศัพท์จอเล็กมาก
+       จอเล็กมาก
     ========================= */
 
     @media (max-width: 420px) {
@@ -394,6 +544,14 @@
         height: 28px;
       }
 
+      .activity-card {
+        padding: 16px;
+      }
+
+      .activity-card h3 {
+        font-size: 18px;
+      }
+
     }
 
   </style>
@@ -409,41 +567,22 @@
 
   <nav class="navbar">
 
-    <a href="portfolio.html">
-      🏠 หน้าแรก
-    </a>
+    <a href="portfolio.html">🏠 หน้าแรก</a>
 
-    <a href="intro.html">
-      📖 คำนำ
-    </a>
+    <a href="intro.html">📖 คำนำ</a>
 
-    <a href="profile.html">
-      👤 ประวัติส่วนตัว
-    </a>
+    <a href="profile.html">👤 ประวัติส่วนตัว</a>
 
-    <a href="education.html">
-      🎓 ประวัติการศึกษา
-    </a>
+    <a href="education.html">🎓 ประวัติการศึกษา</a>
 
-    <a href="interest.html">
-      🔬 ความสนใจในการศึกษาต่อ
-    </a>
+    <a href="interest.html">🔬 ความสนใจในการศึกษาต่อ</a>
 
-    <a href="activity.html">
-      🏆 กิจกรรมที่เข้าร่วม
-    </a>
+    <a href="activity.html">🏆 กิจกรรมที่เข้าร่วม</a>
 
-    <a href="talent.html">
-      ⭐ ความสามารถพิเศษ
-    </a>
+    <a href="talent.html">⭐ ความสามารถพิเศษ</a>
 
   </nav>
 
-
-
-  <!-- =========================
-       กล่องหลัก
-  ========================= -->
 
   <div class="container">
 
@@ -454,9 +593,7 @@
 
     <div class="header-card">
 
-      <span class="heart-icon">
-        💖
-      </span>
+      <span class="heart-icon">💖</span>
 
       <h1 class="title-text">
         ความสามารถพิเศษ
@@ -465,9 +602,8 @@
     </div>
 
 
-
     <!-- =========================
-         การ์ดกราฟ
+         กราฟเปอร์เซ็นต์
     ========================= -->
 
     <div class="chart-card">
@@ -475,7 +611,7 @@
       <div class="chart-container">
 
 
-        <!-- ความสามารถที่ 1 -->
+        <!-- จิตอาสา -->
 
         <div class="chart-row">
 
@@ -495,13 +631,12 @@
         </div>
 
 
-
-        <!-- ความสามารถที่ 2 -->
+        <!-- ปฐมพยาบาล -->
 
         <div class="chart-row">
 
           <div class="label">
-            ทักษะการปฐมพยาบาลและการตรวจเบื้องต้น
+            ปฐมพยาบาลและตรวจเบื้องต้น
           </div>
 
           <div class="bar-container">
@@ -516,8 +651,7 @@
         </div>
 
 
-
-        <!-- ความสามารถที่ 3 -->
+        <!-- ทำงานร่วมกับผู้อื่น -->
 
         <div class="chart-row">
 
@@ -537,8 +671,7 @@
         </div>
 
 
-
-        <!-- ความสามารถที่ 4 -->
+        <!-- ความเป็นผู้นำ -->
 
         <div class="chart-row">
 
@@ -558,49 +691,379 @@
         </div>
 
 
-
-        <!-- =========================
-             ตัวเลข 0 - 100
-        ========================= -->
+        <!-- ตัวเลข -->
 
         <div class="scale-container">
 
           <span>0</span>
-
           <span>20</span>
-
           <span>40</span>
-
           <span>60</span>
-
           <span>80</span>
-
           <span>100</span>
 
         </div>
-
 
       </div>
 
     </div>
 
 
+    <!-- =====================================================
+         หลักฐานกิจกรรม
+    ====================================================== -->
 
-    <!-- =========================
-         ปุ่มกลับหน้า Portfolio
-    ========================= -->
+    <div class="evidence-section">
 
-    <div class="back">
-
-      <a href="portfolio.html">
-        🌷 กลับหน้า Portfolio
-      </a>
-
-    </div>
+      <h2 class="evidence-title">
+        🏆 กิจกรรมและหลักฐานที่แสดงถึงทักษะ
+      </h2>
 
 
-  </div>
+      <!-- =================================================
+           ทักษะที่ 1 : จิตอาสา
+      ================================================== -->
+
+      <div class="skill-section">
+
+        <div class="skill-heading">
+          💖 จิตอาสา
+        </div>
 
 
-</body>
-</html>
+        <!-- กิจกรรมที่ 1 -->
+
+        <div class="activity-card">
+
+          <h3>
+            🌊 กิจกรรมเก็บขยะริมหาดในงาน Say Hi น้องเต่า ครั้งที่ 45
+          </h3>
+
+          <div class="activity-content">
+
+            <img
+              src="activity1.jpg"
+              alt="กิจกรรมเก็บขยะริมหาดในงาน Say Hi น้องเต่า ครั้งที่ 45"
+              class="activity-image"
+            >
+
+            <div class="activity-text">
+
+              <p>
+                <span class="topic">รายละเอียดกิจกรรม:</span>
+                เข้าร่วมกิจกรรมเก็บขยะบริเวณริมชายหาด
+                เพื่อช่วยดูแลรักษาความสะอาดของพื้นที่และสิ่งแวดล้อม
+              </p>
+
+              <p>
+                <span class="topic">ความสอดคล้องกับทักษะ:</span>
+                กิจกรรมนี้สะท้อนถึงความมีจิตสาธารณะ
+                ความเสียสละ และความรับผิดชอบต่อส่วนรวม
+                รวมถึงการตระหนักถึงความสำคัญของสิ่งแวดล้อม
+              </p>
+
+              <div class="proof">
+                🏅 หลักฐาน: รูปภาพกิจกรรม / เกียรติบัตร
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- กิจกรรมที่ 2 -->
+
+        <div class="activity-card">
+
+          <h3>
+            📚 จิตอาสาในงานมหกรรมวิชาการ
+            “ทักษะสร้างสุข วิชาการสร้างงาน เปิดบ้านสู่ EEC”
+          </h3>
+
+          <div class="activity-content">
+
+            <img
+              src="activity2.jpg"
+              alt="จิตอาสาในงานมหกรรมวิชาการ"
+              class="activity-image"
+            >
+
+            <div class="activity-text">
+
+              <p>
+                <span class="topic">รายละเอียดกิจกรรม:</span>
+                เข้าร่วมเป็นจิตอาสาในการดำเนินงานมหกรรมวิชาการ
+                โดยช่วยสนับสนุนและอำนวยความสะดวกภายในงาน
+              </p>
+
+              <p>
+                <span class="topic">ความสอดคล้องกับทักษะ:</span>
+                กิจกรรมนี้แสดงถึงความเสียสละ
+                ความรับผิดชอบ และความเต็มใจในการช่วยเหลืองานส่วนรวม
+                อีกทั้งยังได้เรียนรู้การทำงานร่วมกับผู้อื่น
+                เพื่อให้งานดำเนินไปอย่างเรียบร้อย
+              </p>
+
+              <div class="proof">
+                🏅 หลักฐาน: รูปภาพกิจกรรม / เกียรติบัตร
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           ทักษะที่ 2 : ปฐมพยาบาลและตรวจเบื้องต้น
+      ================================================== -->
+
+      <div class="skill-section">
+
+        <div class="skill-heading">
+          🩺 ทักษะการปฐมพยาบาลและการตรวจเบื้องต้น
+        </div>
+
+
+        <!-- กิจกรรมที่ 3 -->
+
+        <div class="activity-card">
+
+          <h3>
+            🚒 อบรมเชิงปฏิบัติการเสริมสร้างความปลอดภัยในสถานศึกษา
+          </h3>
+
+          <div class="activity-content">
+
+            <img
+              src="activity3.jpg"
+              alt="อบรมเชิงปฏิบัติการเสริมสร้างความปลอดภัยในสถานศึกษา"
+              class="activity-image"
+            >
+
+            <div class="activity-text">
+
+              <p>
+                <span class="topic">รายละเอียดกิจกรรม:</span>
+                เข้าร่วมการอบรมเชิงปฏิบัติการเกี่ยวกับการเสริมสร้าง
+                ความปลอดภัยในสถานศึกษา และการรับมือกับสถานการณ์ฉุกเฉิน
+              </p>
+
+              <p>
+                <span class="topic">ความสอดคล้องกับทักษะ:</span>
+                กิจกรรมนี้ช่วยพัฒนาความรู้เกี่ยวกับการรับมือ
+                สถานการณ์ฉุกเฉิน การสังเกตและประเมินสถานการณ์
+                รวมถึงการช่วยเหลือผู้อื่นอย่างเหมาะสมและปลอดภัย
+              </p>
+
+              <div class="proof">
+                🏅 หลักฐาน: รูปภาพกิจกรรม / เกียรติบัตร
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- กิจกรรมที่ 4 -->
+
+        <div class="activity-card">
+
+          <h3>
+            🩺 การใช้หูฟังแพทย์ใน
+            “โครงการเปิดบ้านแพทย์บูรพา ประจำปีการศึกษา 2568”
+          </h3>
+
+          <div class="activity-content">
+
+            <img
+              src="activity4.jpg"
+              alt="การใช้หูฟังแพทย์ในโครงการเปิดบ้านแพทย์บูรพา"
+              class="activity-image"
+            >
+
+            <div class="activity-text">
+
+              <p>
+                <span class="topic">รายละเอียดกิจกรรม:</span>
+                เข้าร่วมกิจกรรมการเรียนรู้เกี่ยวกับการใช้หูฟังแพทย์
+                และการตรวจเบื้องต้นภายใต้โครงการเปิดบ้านแพทย์บูรพา
+              </p>
+
+              <p>
+                <span class="topic">ความสอดคล้องกับทักษะ:</span>
+                กิจกรรมนี้ช่วยให้ได้เรียนรู้ทักษะพื้นฐานทางการแพทย์
+                ฝึกการสังเกตและการตรวจเบื้องต้น
+                รวมถึงสร้างความเข้าใจเกี่ยวกับการทำงานของบุคลากรทางการแพทย์
+              </p>
+
+              <div class="proof">
+                🏅 หลักฐาน: รูปภาพกิจกรรม / เกียรติบัตร
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           ทักษะที่ 3 : ทำงานร่วมกับผู้อื่น
+      ================================================== -->
+
+      <div class="skill-section">
+
+        <div class="skill-heading">
+          🤝 ทักษะการทำงานร่วมกับผู้อื่น
+        </div>
+
+
+        <!-- กิจกรรมที่ 5 -->
+
+        <div class="activity-card">
+
+          <h3>
+            🧬 การผ่า Gross Anatomy ใน
+            “โครงการเปิดบ้านแพทย์บูรพา ประจำปีการศึกษา 2568”
+          </h3>
+
+          <div class="activity-content">
+
+            <img
+              src="activity5.jpg"
+              alt="กิจกรรม Gross Anatomy"
+              class="activity-image"
+            >
+
+            <div class="activity-text">
+
+              <p>
+                <span class="topic">รายละเอียดกิจกรรม:</span>
+                เข้าร่วมกิจกรรมการเรียนรู้ด้านกายวิภาคศาสตร์
+                โดยทำกิจกรรมร่วมกับผู้เข้าร่วมคนอื่น ๆ
+                ภายใต้โครงการเปิดบ้านแพทย์บูรพา
+              </p>
+
+              <p>
+                <span class="topic">ความสอดคล้องกับทักษะ:</span>
+                กิจกรรมนี้ช่วยฝึกการสื่อสาร
+                การแลกเปลี่ยนความคิดเห็น และการทำงานร่วมกับผู้อื่น
+                โดยต้องอาศัยความร่วมมือและความรับผิดชอบร่วมกัน
+              </p>
+
+              <div class="proof">
+                🏅 หลักฐาน: รูปภาพกิจกรรม / เกียรติบัตร
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- กิจกรรมที่ 6 -->
+
+        <div class="activity-card">
+
+          <h3>
+            🙏 การอบรมคุณธรรมจริยธรรมนักเรียน
+          </h3>
+
+          <div class="activity-content">
+
+            <img
+              src="activity6.jpg"
+              alt="การอบรมคุณธรรมจริยธรรมนักเรียน"
+              class="activity-image"
+            >
+
+            <div class="activity-text">
+
+              <p>
+                <span class="topic">รายละเอียดกิจกรรม:</span>
+                เข้าร่วมการอบรมคุณธรรมและจริยธรรม
+                เพื่อพัฒนาความรับผิดชอบ การเคารพผู้อื่น
+                และการอยู่ร่วมกันในสังคม
+              </p>
+
+              <p>
+                <span class="topic">ความสอดคล้องกับทักษะ:</span>
+                กิจกรรมนี้ส่งเสริมการรับฟังความคิดเห็นของผู้อื่น
+                การเคารพความแตกต่าง และการอยู่ร่วมกับผู้อื่นอย่างเหมาะสม
+                ซึ่งเป็นพื้นฐานสำคัญของการทำงานเป็นทีม
+              </p>
+
+              <div class="proof">
+                🏅 หลักฐาน: รูปภาพกิจกรรม / เกียรติบัตร
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           ทักษะที่ 4 : ความเป็นผู้นำ
+      ================================================== -->
+
+      <div class="skill-section">
+
+        <div class="skill-heading">
+          👑 ความเป็นผู้นำ
+        </div>
+
+
+        <!-- กิจกรรมที่ 7 -->
+
+        <div class="activity-card">
+
+          <h3>
+            📢 ประชาสัมพันธ์ข่าวเกี่ยวกับโทษของยาเสพติด
+            ในวันต่อต้านยาเสพติด
+          </h3>
+
+          <div class="activity-content">
+
+            <img
+              src="activity7.jpg"
+              alt="กิจกรรมประชาสัมพันธ์วันต่อต้านยาเสพติด"
+              class="activity-image"
+            >
+
+            <div class="activity-text">
+
+              <p>
+                <span class="topic">รายละเอียดกิจกรรม:</span>
+                มีส่วนร่วมในการประชาสัมพันธ์ข้อมูลเกี่ยวกับโทษ
+                และผลกระทบของยาเสพติด เนื่องในวันต่อต้านยาเสพติด
+                เพื่อสร้างความรู้และความตระหนักให้แก่ผู้อื่น
+              </p>
+
+              <p>
+                <span class="topic">ความสอดคล้องกับทักษะ:</span>
+                กิจกรรมนี้สะท้อนถึงความกล้าแสดงออก
+                ความรับผิดชอบ และความสามารถในการสื่อสารข้อมูล
+                ให้ผู้อื่นเข้าใจ รวมถึงการริเริ่มและรับผิดชอบหน้าที่
+                ซึ่งเป็นองค์ประกอบสำคัญของความเป็นผู้นำ
+              </p>
+
+              <div class="proof">
+                🏅 หลักฐาน: รูปภาพกิจกรรม / เกียรติบัตร
+              </div>
+
+           
